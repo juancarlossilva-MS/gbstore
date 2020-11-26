@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   Collapse,
+  Button,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -22,6 +23,17 @@ const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+
+  const mystyle = {
+   
+    display: 'inline-block',
+    borderColor: "black",
+    borderStyle: "solid",
+    borderWidth: "2px",
+    borderRadius: "9px",
+    width: '40px'
+  };
 
   return (
     <div>
@@ -57,7 +69,9 @@ const Example = (props) => {
           <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
-    </div>
+   
+        <Button style={mystyle}>Produtos</Button>
+      </div>
   );
 }
 
