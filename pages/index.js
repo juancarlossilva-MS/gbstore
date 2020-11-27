@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { MdPhonelinkRing } from "react-icons/md";
 
 import {
-  Collapse,
+  Collapse,Container, Row, Col,
   Button,
   Navbar,
   NavbarToggler,
@@ -34,13 +35,15 @@ const Example = (props) => {
     borderRadius: "9px",
     width: '40px'
   };
-
+  const white = {
+    color:"white"
+  }
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+      <Navbar color="primary" light expand="md">
+        <NavbarBrand style={white} href="/">GBSTORE</NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse style={white} isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/components/">Components</NavLink>
@@ -69,8 +72,20 @@ const Example = (props) => {
           <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
-   
-        <Button style={mystyle}>Produtos</Button>
+      <Container>
+
+      <Row style={{marginTop:"10%",marginLeft:"5%"}}>
+        <Col xs="6" sm="4">
+          <Button color="primary" size="lg" ><MdPhonelinkRing style={{width:"200px",height:"200px"}}/> 
+          <h5>Categoria de Produtos</h5>
+          </Button>
+          
+          </Col>
+        <Col xs="6" sm="4"></Col>
+        <Col sm="4">.col-sm-4</Col>
+      </Row>
+      </Container>
+      
       </div>
   );
 }
