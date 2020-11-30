@@ -16,6 +16,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  Breadcrumb,BreadcrumbItem,
   NavbarText
 } from 'reactstrap';
 
@@ -56,46 +57,16 @@ const Example = (props) => {
            <a onclick={{logout}}>sair</a>
         </Collapse>
       </Navbar>
+      <div>
+        
+        <Breadcrumb>
+          <BreadcrumbItem><a href="/">Home</a></BreadcrumbItem>
+          <BreadcrumbItem><a href="/categorias">Categorias</a></BreadcrumbItem>
+        </Breadcrumb>
+      </div>
+     
       <Container>
-
-      <Row  className="justify-content-md-center"   style={{marginTop:"10%"}}>
-        <Col xs="6" sm="4">
-        <Link href="/categorias">
-
-          <Button color="primary" size="lg" ><MdPhonelinkRing style={{width:"100px",height:"90px"}}/> 
-          <h6>Categoria de</h6>
-          <h6 style={{marginTop:"-5%"}}>Produtos</h6>
-          </Button>
-          </Link>
-          </Col>
-          <Col xs="6" sm="4">
-          <Link href="/vendas">
-            <Button color="primary"  size="lg" ><MdAttachMoney style={{width:"100px",height:"100px"}}/> 
-            <h6>Vendas</h6>
-            </Button>
-          </Link>
-          
-          
-          </Col>
-      </Row>
-      <Row  className="justify-content-md-center"   style={{marginTop:"10%"}}>
-        <Col xs="6" sm="4">
-        <Link href="/clientes">
-
-          <Button color="primary" size="lg" ><MdPeople style={{width:"100px",height:"100px"}}/> 
-          <h6>Clientes</h6>
-          </Button>
-          </Link>
-          </Col>
-          <Col xs="6" sm="4">
-          <Link href="/relatorios">
-
-          <Button color="primary" size="lg" ><MdShowChart style={{width:"100px",height:"100px"}}/> 
-          <h6>Relatórios</h6>
-          </Button>
-          </Link>
-          </Col>
-      </Row>
+     
       </Container>
       
       </div>
