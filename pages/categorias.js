@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, Component, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MdPhonelinkRing, MdSpeakerPhone, MdAttachMoney, MdPeople, MdShowChart } from "react-icons/md";
 import Link from 'next/link'
 
 import fire from '../config/fire-config';
-
+import * as Icons from "react-icons/md";
 
 import {
   Collapse,Container, Row, Col,
@@ -45,7 +45,6 @@ const Example = (props) => {
     color:"white"
   }
 
-<<<<<<< HEAD
   const [blogs, setBlogs] = useState([]);
 useEffect(() => {
     fire.firestore()
@@ -56,20 +55,25 @@ useEffect(() => {
           ...doc.data()
         }));
         setBlogs(blogs);
+        console.log(blogs[0].iconName);
       });
   }, []);
-console.log(blogs)
-=======
- 
-  fire.listCollections()
-  .then(snapshot=>{
-      snapshot.forEach(snaps=>{
-          console.log(snaps["_queryOptions"].collectionId);  // GET LIST OF ALL COLLECTIONS
-      })
-  })
-  .catch(error=>console.log(error));
+  const iconList = Object
+  .keys(Icons)
+  .filter(key => key !== "fas" && key !== "prefix" )
+  .map(icon => Icons[icon])
+
+
+  const mostraicon = () =>{
+    for(let i=0; i< iconList.length; i++){
+      if(blogs[0].iconName == iconList[i].name){
+        console.log(blogs[0].iconName);
+        console.log(iconList[i].icon);
+        return iconList[i]();
+      }
+    }
+  }
   
->>>>>>> 8560450dbaf7a5cfa58a9925de70167aa4fb16f5
 
   return (
     <div>
@@ -96,7 +100,7 @@ console.log(blogs)
       </div>
      
       <Container>
-     
+        <blogs[0].iconName/>
       </Container>
       
       </div>
@@ -104,3 +108,4 @@ console.log(blogs)
 }
 
 export default Example;
+
