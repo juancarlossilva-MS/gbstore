@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MdPhonelinkRing, MdSpeakerPhone, MdAttachMoney, MdPeople, MdShowChart } from "react-icons/md";
 import Link from 'next/link'
+
+import fire from '../config/fire-config';
+
 
 import {
   Collapse,Container, Row, Col,
@@ -41,6 +44,21 @@ const Example = (props) => {
   const white = {
     color:"white"
   }
+
+  const [blogs, setBlogs] = useState([]);
+useEffect(() => {
+    fire.firestore()
+      .collection('categorias')
+      .onSnapshot(snap => {
+        const blogs = snap.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setBlogs(blogs);
+      });
+  }, []);
+console.log(blogs)
+
   return (
     <div>
       <Navbar color="primary" light expand="md">
