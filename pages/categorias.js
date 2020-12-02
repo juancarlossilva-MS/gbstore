@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { MdPhonelinkRing, MdSpeakerPhone, MdAttachMoney, MdPeople, MdShowChart } from "react-icons/md";
 import Link from 'next/link'
 
+import fire from '../config/fire-config';
+
+
 import {
   Collapse,Container, Row, Col,
   Button,
@@ -41,6 +44,17 @@ const Example = (props) => {
   const white = {
     color:"white"
   }
+
+ 
+  fire.listCollections()
+  .then(snapshot=>{
+      snapshot.forEach(snaps=>{
+          console.log(snaps["_queryOptions"].collectionId);  // GET LIST OF ALL COLLECTIONS
+      })
+  })
+  .catch(error=>console.log(error));
+  
+
   return (
     <div>
       <Navbar color="primary" light expand="md">
