@@ -45,6 +45,7 @@ const Example = (props) => {
     color:"white"
   }
 
+<<<<<<< HEAD
   const [blogs, setBlogs] = useState([]);
 useEffect(() => {
     fire.firestore()
@@ -58,6 +59,17 @@ useEffect(() => {
       });
   }, []);
 console.log(blogs)
+=======
+ 
+  fire.listCollections()
+  .then(snapshot=>{
+      snapshot.forEach(snaps=>{
+          console.log(snaps["_queryOptions"].collectionId);  // GET LIST OF ALL COLLECTIONS
+      })
+  })
+  .catch(error=>console.log(error));
+  
+>>>>>>> 8560450dbaf7a5cfa58a9925de70167aa4fb16f5
 
   return (
     <div>
