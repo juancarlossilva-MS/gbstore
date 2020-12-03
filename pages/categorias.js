@@ -4,7 +4,7 @@ import { MdPhonelinkRing, MdSpeakerPhone, MdAttachMoney, MdPeople, MdShowChart }
 import Link from 'next/link'
 
 import fire from '../config/fire-config';
-import * as Icons from "react-icons/md";
+import Icon from '@material-ui/core/Icon';
 
 import {
   Collapse,Container, Row, Col,
@@ -55,28 +55,16 @@ useEffect(() => {
           ...doc.data()
         }));
         setBlogs(blogs);
-        console.log(blogs[0].iconName);
       });
   }, []);
-  const iconList = Object
-  .keys(Icons)
-  .filter(key => key !== "fas" && key !== "prefix" )
-  .map(icon => Icons[icon])
 
-
-  const mostraicon = () =>{
-    for(let i=0; i< iconList.length; i++){
-      if(blogs[0].iconName == iconList[i].name){
-        console.log(blogs[0].iconName);
-        console.log(iconList[i].icon);
-        return iconList[i]();
-      }
-    }
-  }
-  
+ 
 
   return (
+    
     <div>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"></link>
       <Navbar color="primary" light expand="md">
         <NavbarBrand className="justify-content-md-center" style={white} href="/">GABRIEL STORE <MdSpeakerPhone style={{fontSize:"32px"}}/></NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -88,7 +76,7 @@ useEffect(() => {
           <NavbarText style={white}>Username</NavbarText>
         
           </Nav>  
-           <a onclick={{logout}}>sair</a>
+           <a onClick={{logout}}>sair </a>
         </Collapse>
       </Navbar>
       <div>
@@ -100,7 +88,7 @@ useEffect(() => {
       </div>
      
       <Container>
-        <blogs[0].iconName/>
+         <Icon>stay_primary_portrait</Icon> 
       </Container>
       
       </div>

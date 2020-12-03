@@ -1,6 +1,23 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './pages/_app.js';
+import Icon from '@material-ui/core/Icon';
+
+import {
+  Collapse,Container, Row, Col,
+  Button,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Breadcrumb,BreadcrumbItem,
+  NavbarText
+} from 'reactstrap';
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +42,10 @@ const Example = (props) => {
   }
   return (
     <div>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"></link>
       <Navbar color="primary" light expand="md">
-        <NavbarBrand className="justify-content-md-center" style={white} href="/">GABRIEL STORE <MdSpeakerPhone style={{fontSize:"32px"}}/></NavbarBrand>
+        <NavbarBrand className="justify-content-md-center" style={white} href="/">GABRIEL STORE <Icon style={{fontSize:"32px"}}>speaker_phone</Icon></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse style={white} isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -50,967 +69,1125 @@ const Example = (props) => {
       </div>
      
       <Container>
+      https://sebhastian.com/react-firebase-real-time-database-guide/
       
-   
-<button ><Md3DRotation
-/></button ><button ><MdAccessibility
-/></button ><button ><MdAccessible
-/></button ><button ><MdAccountBalance
-/></button ><button ><MdAccountBalanceWallet
-/></button ><button ><MdAccountBox
-/></button ><button ><MdAccountCircle
-/></button ><button ><MdAddShoppingCart
-/></button ><button ><MdAlarm
-/></button ><button ><MdAlarmAdd
-/></button ><button ><MdAlarmOff
-/></button ><button ><MdAlarmOn
-/></button ><button ><MdAllOut
-/></button ><button ><MdAndroid
-/></button ><button ><MdAnnouncement
-/></button ><button ><MdAspectRatio
-/></button ><button ><MdAssessment
-/></button ><button ><MdAssignment
-/></button ><button ><MdAssignmentInd
-/></button ><button ><MdAssignmentLate
-/></button ><button ><MdAssignmentReturn
-/></button ><button ><MdAssignmentReturned
-/></button ><button ><MdAssignmentTurnedIn
-/></button ><button ><MdAutorenew
-/></button ><button ><MdBackup
-/></button ><button ><MdBook
-/></button ><button ><MdBookmark
-/></button ><button ><MdBookmarkBorder
-/></button ><button ><MdBugReport
-/></button ><button ><MdBuild
-/></button ><button ><MdCached
-/></button ><button ><MdCameraEnhance
-/></button ><button ><MdCardGiftcard
-/></button ><button ><MdCardMembership
-/></button ><button ><MdCardTravel
-/></button ><button ><MdChangeHistory
-/></button ><button ><MdCheckCircle
-/></button ><button ><MdChromeReaderMode
-/></button ><button ><MdClass
-/></button ><button ><MdCode
-/></button ><button ><MdCompareArrows
-/></button ><button ><MdCopyright
-/></button ><button ><MdCreditCard
-/></button ><button ><MdDashboard
-/></button ><button ><MdDateRange
-/></button ><button ><MdDelete
-/></button ><button ><MdDeleteForever
-/></button ><button ><MdDescription
-/></button ><button ><MdDns
-/></button ><button ><MdDone
-/></button ><button ><MdDoneAll
-/></button ><button ><MdDonutLarge
-/></button ><button ><MdDonutSmall
-/></button ><button ><MdEject
-/></button ><button ><MdEuroSymbol
-/></button ><button ><MdEvent
-/></button ><button ><MdEventSeat
-/></button ><button ><MdExitToApp
-/></button ><button ><MdExplore
-/></button ><button ><MdExtension
-/></button ><button ><MdFace
-/></button ><button ><MdFavorite
-/></button ><button ><MdFavoriteBorder
-/></button ><button ><MdFeedback
-/></button ><button ><MdFindInPage
-/></button ><button ><MdFindReplace
-/></button ><button ><MdFingerprint
-/></button ><button ><MdFlightLand
-/></button ><button ><MdFlightTakeoff
-/></button ><button ><MdFlipToBack
-/></button ><button ><MdFlipToFront
-/></button ><button ><MdGTranslate
-/></button ><button ><MdGavel
-/></button ><button ><MdGetApp
-/></button ><button ><MdGif
-/></button ><button ><MdGrade
-/></button ><button ><MdGroupWork
-/></button ><button ><MdHelp
-/></button ><button ><MdHelpOutline
-/></button ><button ><MdHighlightOff
-/></button ><button ><MdHistory
-/></button ><button ><MdHome
-/></button ><button ><MdHourglassEmpty
-/></button ><button ><MdHourglassFull
-/></button ><button ><MdHttp
-/></button ><button ><MdHttps
-/></button ><button ><MdImportantDevices
-/></button ><button ><MdInfo
-/></button ><button ><MdInfoOutline
-/></button ><button ><MdInput
-/></button ><button ><MdInvertColors
-/></button ><button ><MdLabel
-/></button ><button ><MdLabelOutline
-/></button ><button ><MdLanguage
-/></button ><button ><MdLaunch
-/></button ><button ><MdLightbulbOutline
-/></button ><button ><MdLineStyle
-/></button ><button ><MdLineWeight
-/></button ><button ><MdList
-/></button ><button ><MdLock
-/></button ><button ><MdLockOpen
-/></button ><button ><MdLockOutline
-/></button ><button ><MdLoyalty
-/></button ><button ><MdMarkunreadMailbox
-/></button ><button ><MdMotorcycle
-/></button ><button ><MdNoteAdd
-/></button ><button ><MdOfflinePin
-/></button ><button ><MdOpacity
-/></button ><button ><MdOpenInBrowser
-/></button ><button ><MdOpenInNew
-/></button ><button ><MdOpenWith
-/></button ><button ><MdPageview
-/></button ><button ><MdPanTool
-/></button ><button ><MdPayment
-/></button ><button ><MdPermCameraMic
-/></button ><button ><MdPermContactCalendar
-/></button ><button ><MdPermDataSetting
-/></button ><button ><MdPermDeviceInformation
-/></button ><button ><MdPermIdentity
-/></button ><button ><MdPermMedia
-/></button ><button ><MdPermPhoneMsg
-/></button ><button ><MdPermScanWifi
-/></button ><button ><MdPets
-/></button ><button ><MdPictureInPicture
-/></button ><button ><MdPictureInPictureAlt
-/></button ><button ><MdPlayForWork
-/></button ><button ><MdPolymer
-/></button ><button ><MdPowerSettingsNew
-/></button ><button ><MdPregnantWoman
-/></button ><button ><MdPrint
-/></button ><button ><MdQueryBuilder
-/></button ><button ><MdQuestionAnswer
-/></button ><button ><MdReceipt
-/></button ><button ><MdRecordVoiceOver
-/></button ><button ><MdRedeem
-/></button ><button ><MdRemoveShoppingCart
-/></button ><button ><MdReorder
-/></button ><button ><MdReportProblem
-/></button ><button ><MdRestore
-/></button ><button ><MdRestorePage
-/></button ><button ><MdRoom
-/></button ><button ><MdRoundedCorner
-/></button ><button ><MdRowing
-/></button ><button ><MdSchedule
-/></button ><button ><MdSearch
-/></button ><button ><MdSettings
-/></button ><button ><MdSettingsApplications
-/></button ><button ><MdSettingsBackupRestore
-/></button ><button ><MdSettingsBluetooth
-/></button ><button ><MdSettingsBrightness
-/></button ><button ><MdSettingsCell
-/></button ><button ><MdSettingsEthernet
-/></button ><button ><MdSettingsInputAntenna
-/></button ><button ><MdSettingsInputComponent
-/></button ><button ><MdSettingsInputComposite
-/></button ><button ><MdSettingsInputHdmi
-/></button ><button ><MdSettingsInputSvideo
-/></button ><button ><MdSettingsOverscan
-/></button ><button ><MdSettingsPhone
-/></button ><button ><MdSettingsPower
-/></button ><button ><MdSettingsRemote
-/></button ><button ><MdSettingsVoice
-/></button ><button ><MdShop
-/></button ><button ><MdShopTwo
-/></button ><button ><MdShoppingBasket
-/></button ><button ><MdShoppingCart
-/></button ><button ><MdSpeakerNotes
-/></button ><button ><MdSpeakerNotesOff
-/></button ><button ><MdSpellcheck
-/></button ><button ><MdStars
-/></button ><button ><MdStore
-/></button ><button ><MdSubject
-/></button ><button ><MdSupervisorAccount
-/></button ><button ><MdSwapHoriz
-/></button ><button ><MdSwapVert
-/></button ><button ><MdSwapVerticalCircle
-/></button ><button ><MdSystemUpdateAlt
-/></button ><button ><MdTab
-/></button ><button ><MdTabUnselected
-/></button ><button ><MdTheaters
-/></button ><button ><MdThumbDown
-/></button ><button ><MdThumbUp
-/></button ><button ><MdThumbsUpDown
-/></button ><button ><MdTimeline
-/></button ><button ><MdToc
-/></button ><button ><MdToday
-/></button ><button ><MdToll
-/></button ><button ><MdTouchApp
-/></button ><button ><MdTrackChanges
-/></button ><button ><MdTranslate
-/></button ><button ><MdTrendingDown
-/></button ><button ><MdTrendingFlat
-/></button ><button ><MdTrendingUp
-/></button ><button ><MdTurnedIn
-/></button ><button ><MdTurnedInNot
-/></button ><button ><MdUpdate
-/></button ><button ><MdVerifiedUser
-/></button ><button ><MdViewAgenda
-/></button ><button ><MdViewArray
-/></button ><button ><MdViewCarousel
-/></button ><button ><MdViewColumn
-/></button ><button ><MdViewDay
-/></button ><button ><MdViewHeadline
-/></button ><button ><MdViewList
-/></button ><button ><MdViewModule
-/></button ><button ><MdViewQuilt
-/></button ><button ><MdViewStream
-/></button ><button ><MdViewWeek
-/></button ><button ><MdVisibility
-/></button ><button ><MdVisibilityOff
-/></button ><button ><MdWatchLater
-/></button ><button ><MdWork
-/></button ><button ><MdYoutubeSearchedFor
-/></button ><button ><MdZoomIn
-/></button ><button ><MdZoomOut
-/></button ><button ><MdAddAlert
-/></button ><button ><MdError
-/></button ><button ><MdErrorOutline
-/></button ><button ><MdWarning
-/></button ><button ><MdAddToQueue
-/></button ><button ><MdAirplay
-/></button ><button ><MdAlbum
-/></button ><button ><MdArtTrack
-/></button ><button ><MdAvTimer
-/></button ><button ><MdBrandingWatermark
-/></button ><button ><MdCallToAction
-/></button ><button ><MdClosedCaption
-/></button ><button ><MdEqualizer
-/></button ><button ><MdExplicit
-/></button ><button ><MdFastForward
-/></button ><button ><MdFastRewind
-/></button ><button ><MdFeaturedPlayList
-/></button ><button ><MdFeaturedVideo
-/></button ><button ><MdFiberDvr
-/></button ><button ><MdFiberManualRecord
-/></button ><button ><MdFiberNew
-/></button ><button ><MdFiberPin
-/></button ><button ><MdFiberSmartRecord
-/></button ><button ><MdForward10
-/></button ><button ><MdForward30
-/></button ><button ><MdForward5
-/></button ><button ><MdGames
-/></button ><button ><MdHd
-/></button ><button ><MdHearing
-/></button ><button ><MdHighQuality
-/></button ><button ><MdLibraryAdd
-/></button ><button ><MdLibraryBooks
-/></button ><button ><MdLibraryMusic
-/></button ><button ><MdLoop
-/></button ><button ><MdMic
-/></button ><button ><MdMicNone
-/></button ><button ><MdMicOff
-/></button ><button ><MdMovie
-/></button ><button ><MdMusicVideo
-/></button ><button ><MdNewReleases
-/></button ><button ><MdNotInterested
-/></button ><button ><MdNote
-/></button ><button ><MdPause
-/></button ><button ><MdPauseCircleFilled
-/></button ><button ><MdPauseCircleOutline
-/></button ><button ><MdPlayArrow
-/></button ><button ><MdPlayCircleFilled
-/></button ><button ><MdPlayCircleOutline
-/></button ><button ><MdPlaylistAdd
-/></button ><button ><MdPlaylistAddCheck
-/></button ><button ><MdPlaylistPlay
-/></button ><button ><MdQueue
-/></button ><button ><MdQueueMusic
-/></button ><button ><MdQueuePlayNext
-/></button ><button ><MdRadio
-/></button ><button ><MdRecentActors
-/></button ><button ><MdRemoveFromQueue
-/></button ><button ><MdRepeat
-/></button ><button ><MdRepeatOne
-/></button ><button ><MdReplay10
-/></button ><button ><MdReplay
-/></button ><button ><MdReplay30
-/></button ><button ><MdReplay5
-/></button ><button ><MdShuffle
-/></button ><button ><MdSkipNext
-/></button ><button ><MdSkipPrevious
-/></button ><button ><MdSlowMotionVideo
-/></button ><button ><MdSnooze
-/></button ><button ><MdSortByAlpha
-/></button ><button ><MdStop
-/></button ><button ><MdSubscriptions
-/></button ><button ><MdSubtitles
-/></button ><button ><MdSurroundSound
-/></button ><button ><MdVideoCall
-/></button ><button ><MdVideoLabel
-/></button ><button ><MdVideoLibrary
-/></button ><button ><MdVideocam
-/></button ><button ><MdVideocamOff
-/></button ><button ><MdVolumeDown
-/></button ><button ><MdVolumeMute
-/></button ><button ><MdVolumeOff
-/></button ><button ><MdVolumeUp
-/></button ><button ><MdWeb
-/></button ><button ><MdWebAsset
-/></button ><button ><MdBusiness
-/></button ><button ><MdCall
-/></button ><button ><MdCallEnd
-/></button ><button ><MdCallMade
-/></button ><button ><MdCallMerge
-/></button ><button ><MdCallMissed
-/></button ><button ><MdCallMissedOutgoing
-/></button ><button ><MdCallReceived
-/></button ><button ><MdCallSplit
-/></button ><button ><MdChat
-/></button ><button ><MdChatBubble
-/></button ><button ><MdChatBubbleOutline
-/></button ><button ><MdClearAll
-/></button ><button ><MdComment
-/></button ><button ><MdContactMail
-/></button ><button ><MdContactPhone
-/></button ><button ><MdContacts
-/></button ><button ><MdDialerSip
-/></button ><button ><MdDialpad
-/></button ><button ><MdEmail
-/></button ><button ><MdForum
-/></button ><button ><MdImportContacts
-/></button ><button ><MdImportExport
-/></button ><button ><MdInvertColorsOff
-/></button ><button ><MdLiveHelp
-/></button ><button ><MdLocationOff
-/></button ><button ><MdLocationOn
-/></button ><button ><MdMailOutline
-/></button ><button ><MdMessage
-/></button ><button ><MdNoSim
-/></button ><button ><MdPhone
-/></button ><button ><MdPhonelinkErase
-/></button ><button ><MdPhonelinkLock
-/></button ><button ><MdPhonelinkRing
-/></button ><button ><MdPhonelinkSetup
-/></button ><button ><MdPortableWifiOff
-/></button ><button ><MdPresentToAll
-/></button ><button ><MdRingVolume
-/></button ><button ><MdRssFeed
-/></button ><button ><MdScreenShare
-/></button ><button ><MdSpeakerPhone
-/></button ><button ><MdStayCurrentLandscape
-/></button ><button ><MdStayCurrentPortrait
-/></button ><button ><MdStayPrimaryLandscape
-/></button ><button ><MdStayPrimaryPortrait
-/></button ><button ><MdStopScreenShare
-/></button ><button ><MdSwapCalls
-/></button ><button ><MdTextsms
-/></button ><button ><MdVoicemail
-/></button ><button ><MdVpnKey
-/></button ><button ><MdAdd
-/></button ><button ><MdAddBox
-/></button ><button ><MdAddCircle
-/></button ><button ><MdAddCircleOutline
-/></button ><button ><MdArchive
-/></button ><button ><MdBackspace
-/></button ><button ><MdBlock
-/></button ><button ><MdClear
-/></button ><button ><MdContentCopy
-/></button ><button ><MdContentCut
-/></button ><button ><MdContentPaste
-/></button ><button ><MdCreate
-/></button ><button ><MdDeleteSweep
-/></button ><button ><MdDrafts
-/></button ><button ><MdFilterList
-/></button ><button ><MdFlag
-/></button ><button ><MdFontDownload
-/></button ><button ><MdForward
-/></button ><button ><MdGesture
-/></button ><button ><MdInbox
-/></button ><button ><MdLink
-/></button ><button ><MdLowPriority
-/></button ><button ><MdMail
-/></button ><button ><MdMarkunread
-/></button ><button ><MdMoveToInbox
-/></button ><button ><MdNextWeek
-/></button ><button ><MdRedo
-/></button ><button ><MdRemove
-/></button ><button ><MdRemoveCircle
-/></button ><button ><MdRemoveCircleOutline
-/></button ><button ><MdReply
-/></button ><button ><MdReplyAll
-/></button ><button ><MdReport
-/></button ><button ><MdSave
-/></button ><button ><MdSelectAll
-/></button ><button ><MdSend
-/></button ><button ><MdSort
-/></button ><button ><MdTextFormat
-/></button ><button ><MdUnarchive
-/></button ><button ><MdUndo
-/></button ><button ><MdWeekend
-/></button ><button ><MdAccessAlarm
-/></button ><button ><MdAccessAlarms
-/></button ><button ><MdAccessTime
-/></button ><button ><MdAddAlarm
-/></button ><button ><MdAirplanemodeActive
-/></button ><button ><MdAirplanemodeInactive
-/></button ><button ><MdBattery20
-/></button ><button ><MdBattery30
-/></button ><button ><MdBattery50
-/></button ><button ><MdBattery60
-/></button ><button ><MdBattery80
-/></button ><button ><MdBattery90
-/></button ><button ><MdBatteryAlert
-/></button ><button ><MdBatteryCharging20
-/></button ><button ><MdBatteryCharging30
-/></button ><button ><MdBatteryCharging50
-/></button ><button ><MdBatteryCharging60
-/></button ><button ><MdBatteryCharging80
-/></button ><button ><MdBatteryCharging90
-/></button ><button ><MdBatteryChargingFull
-/></button ><button ><MdBatteryFull
-/></button ><button ><MdBatteryStd
-/></button ><button ><MdBatteryUnknown
-/></button ><button ><MdBluetooth
-/></button ><button ><MdBluetoothConnected
-/></button ><button ><MdBluetoothDisabled
-/></button ><button ><MdBluetoothSearching
-/></button ><button ><MdBrightnessAuto
-/></button ><button ><MdBrightnessHigh
-/></button ><button ><MdBrightnessLow
-/></button ><button ><MdBrightnessMedium
-/></button ><button ><MdDataUsage
-/></button ><button ><MdDeveloperMode
-/></button ><button ><MdDevices
-/></button ><button ><MdDvr
-/></button ><button ><MdGpsFixed
-/></button ><button ><MdGpsNotFixed
-/></button ><button ><MdGpsOff
-/></button ><button ><MdGraphicEq
-/></button ><button ><MdLocationDisabled
-/></button ><button ><MdLocationSearching
-/></button ><button ><MdNetworkCell
-/></button ><button ><MdNetworkWifi
-/></button ><button ><MdNfc
-/></button ><button ><MdScreenLockLandscape
-/></button ><button ><MdScreenLockPortrait
-/></button ><button ><MdScreenLockRotation
-/></button ><button ><MdScreenRotation
-/></button ><button ><MdSdStorage
-/></button ><button ><MdSettingsSystemDaydream/></button ><button ><MdSignalCellular0Bar
-/></button ><button ><MdSignalCellular1Bar
-/></button ><button ><MdSignalCellular2Bar
-/></button ><button ><MdSignalCellular3Bar
-/></button ><button ><MdSignalCellular4Bar
-/></button ><button ><MdSignalCellularConnectedNoInternet0Bar
-/></button ><button ><MdSignalCellularConnectedNoInternet1Bar
-/></button ><button ><MdSignalCellularConnectedNoInternet2Bar
-/></button ><button ><MdSignalCellularConnectedNoInternet3Bar
-/></button ><button ><MdSignalCellularConnectedNoInternet4Bar
-/></button ><button ><MdSignalCellularNoSim
-/></button ><button ><MdSignalCellularNull
-/></button ><button ><MdSignalCellularOff
-/></button ><button ><MdSignalWifi0Bar
-/></button ><button ><MdSignalWifi1Bar
-/></button ><button ><MdSignalWifi1BarLock
-/></button ><button ><MdSignalWifi2Bar
-/></button ><button ><MdSignalWifi2BarLock
-/></button ><button ><MdSignalWifi3Bar
-/></button ><button ><MdSignalWifi3BarLock
-/></button ><button ><MdSignalWifi4Bar
-/></button ><button ><MdSignalWifi4BarLock
-/></button ><button ><MdSignalWifiOff
-/></button ><button ><MdStorage
-/></button ><button ><MdUsb
-/></button ><button ><MdWallpaper
-/></button ><button ><MdWidgets
-/></button ><button ><MdWifiLock
-/></button ><button ><MdWifiTethering
-/></button ><button ><MdAttachFile
-/></button ><button ><MdAttachMoney
-/></button ><button ><MdBorderAll
-/></button ><button ><MdBorderBottom
-/></button ><button ><MdBorderClear
-/></button ><button ><MdBorderColor
-/></button ><button ><MdBorderHorizontal
-/></button ><button ><MdBorderInner
-/></button ><button ><MdBorderLeft
-/></button ><button ><MdBorderOuter
-/></button ><button ><MdBorderRight
-/></button ><button ><MdBorderStyle
-/></button ><button ><MdBorderTop
-/></button ><button ><MdBorderVertical
-/></button ><button ><MdBubbleChart
-/></button ><button ><MdDragHandle
-/></button ><button ><MdFormatAlignCenter
-/></button ><button ><MdFormatAlignJustify
-/></button ><button ><MdFormatAlignLeft
-/></button ><button ><MdFormatAlignRight
-/></button ><button ><MdFormatBold
-/></button ><button ><MdFormatClear
-/></button ><button ><MdFormatColorFill
-/></button ><button ><MdFormatColorReset
-/></button ><button ><MdFormatColorText
-/></button ><button ><MdFormatIndentDecrease
-/></button ><button ><MdFormatIndentIncrease
-/></button ><button ><MdFormatItalic
-/></button ><button ><MdFormatLineSpacing
-/></button ><button ><MdFormatListBulleted
-/></button ><button ><MdFormatListNumbered
-/></button ><button ><MdFormatPaint
-/></button ><button ><MdFormatQuote
-/></button ><button ><MdFormatShapes
-/></button ><button ><MdFormatSize
-/></button ><button ><MdFormatStrikethrough
-/></button ><button ><MdFormatTextdirectionLToR
-/></button ><button ><MdFormatTextdirectionRToL
-/></button ><button ><MdFormatUnderlined
-/></button ><button ><MdFunctions
-/></button ><button ><MdHighlight
-/></button ><button ><MdInsertChart
-/></button ><button ><MdInsertComment
-/></button ><button ><MdInsertDriveFile
-/></button ><button ><MdInsertEmoticon
-/></button ><button ><MdInsertInvitation
-/></button ><button ><MdInsertLink
-/></button ><button ><MdInsertPhoto
-/></button ><button ><MdLinearScale
-/></button ><button ><MdMergeType
-/></button ><button ><MdModeComment
-/></button ><button ><MdModeEdit
-/></button ><button ><MdMonetizationOn
-/></button ><button ><MdMoneyOff
-/></button ><button ><MdMultilineChart
-/></button ><button ><MdPieChart
-/></button ><button ><MdPieChartOutlined
-/></button ><button ><MdPublish
-/></button ><button ><MdShortText
-/></button ><button ><MdShowChart
-/></button ><button ><MdSpaceBar
-/></button ><button ><MdStrikethroughS
-/></button ><button ><MdTextFields
-/></button ><button ><MdTitle
-/></button ><button ><MdVerticalAlignBottom
-/></button ><button ><MdVerticalAlignCenter
-/></button ><button ><MdVerticalAlignTop
-/></button ><button ><MdWrapText
-/></button ><button ><MdAttachment
-/></button ><button ><MdCloud
-/></button ><button ><MdCloudCircle
-/></button ><button ><MdCloudDone
-/></button ><button ><MdCloudDownload
-/></button ><button ><MdCloudOff
-/></button ><button ><MdCloudQueue
-/></button ><button ><MdCloudUpload
-/></button ><button ><MdCreateNewFolder
-/></button ><button ><MdFileDownload
-/></button ><button ><MdFileUpload
-/></button ><button ><MdFolder
-/></button ><button ><MdFolderOpen
-/></button ><button ><MdFolderShared
-/></button ><button ><MdCast
-/></button ><button ><MdCastConnected
-/></button ><button ><MdComputer
-/></button ><button ><MdDesktopMac
-/></button ><button ><MdDesktopWindows
-/></button ><button ><MdDeveloperBoard
-/></button ><button ><MdDeviceHub
-/></button ><button ><MdDevicesOther
-/></button ><button ><MdDock
-/></button ><button ><MdGamepad
-/></button ><button ><MdHeadset
-/></button ><button ><MdHeadsetMic
-/></button ><button ><MdKeyboard
-/></button ><button ><MdKeyboardArrowDown
-/></button ><button ><MdKeyboardArrowLeft
-/></button ><button ><MdKeyboardArrowRight
-/></button ><button ><MdKeyboardArrowUp
-/></button ><button ><MdKeyboardBackspace
-/></button ><button ><MdKeyboardCapslock
-/></button ><button ><MdKeyboardHide
-/></button ><button ><MdKeyboardReturn
-/></button ><button ><MdKeyboardTab
-/></button ><button ><MdKeyboardVoice
-/></button ><button ><MdLaptop
-/></button ><button ><MdLaptopChromebook
-/></button ><button ><MdLaptopMac
-/></button ><button ><MdLaptopWindows
-/></button ><button ><MdMemory
-/></button ><button ><MdMouse
-/></button ><button ><MdPhoneAndroid
-/></button ><button ><MdPhoneIphone
-/></button ><button ><MdPhonelink
-/></button ><button ><MdPhonelinkOff
-/></button ><button ><MdPowerInput
-/></button ><button ><MdRouter
-/></button ><button ><MdScanner
-/></button ><button ><MdSecurity
-/></button ><button ><MdSimCard
-/></button ><button ><MdSmartphone
-/></button ><button ><MdSpeaker
-/></button ><button ><MdSpeakerGroup
-/></button ><button ><MdTablet
-/></button ><button ><MdTabletAndroid
-/></button ><button ><MdTabletMac
-/></button ><button ><MdToys
-/></button ><button ><MdTv
-/></button ><button ><MdVideogameAsset
-/></button ><button ><MdWatch
-/></button ><button ><MdAddAPhoto
-/></button ><button ><MdAddToPhotos
-/></button ><button ><MdAdjust
-/></button ><button ><MdAssistant
-/></button ><button ><MdAssistantPhoto
-/></button ><button ><MdAudiotrack
-/></button ><button ><MdBlurCircular
-/></button ><button ><MdBlurLinear
-/></button ><button ><MdBlurOff
-/></button ><button ><MdBlurOn
-/></button ><button ><MdBrightness1
-/></button ><button ><MdBrightness2
-/></button ><button ><MdBrightness3
-/></button ><button ><MdBrightness4
-/></button ><button ><MdBrightness5
-/></button ><button ><MdBrightness6
-/></button ><button ><MdBrightness7
-/></button ><button ><MdBrokenImage
-/></button ><button ><MdBrush
-/></button ><button ><MdBurstMode
-/></button ><button ><MdCamera
-/></button ><button ><MdCameraAlt
-/></button ><button ><MdCameraFront
-/></button ><button ><MdCameraRear
-/></button ><button ><MdCameraRoll
-/></button ><button ><MdCenterFocusStrong
-/></button ><button ><MdCenterFocusWeak
-/></button ><button ><MdCollections
-/></button ><button ><MdCollectionsBookmark
-/></button ><button ><MdColorLens
-/></button ><button ><MdColorize
-/></button ><button ><MdCompare
-/></button ><button ><MdControlPoint
-/></button ><button ><MdControlPointDuplicate
-/></button ><button ><MdCrop169
-/></button ><button ><MdCrop
-/></button ><button ><MdCrop32
-/></button ><button ><MdCrop54
-/></button ><button ><MdCrop75
-/></button ><button ><MdCropDin
-/></button ><button ><MdCropFree
-/></button ><button ><MdCropLandscape
-/></button ><button ><MdCropOriginal
-/></button ><button ><MdCropPortrait
-/></button ><button ><MdCropRotate
-/></button ><button ><MdCropSquare
-/></button ><button ><MdDehaze
-/></button ><button ><MdDetails
-/></button ><button ><MdEdit
-/></button ><button ><MdExposure
-/></button ><button ><MdExposureNeg1
-/></button ><button ><MdExposureNeg2
-/></button ><button ><MdExposurePlus1
-/></button ><button ><MdExposurePlus2
-/></button ><button ><MdExposureZero
-/></button ><button ><MdFilter1
-/></button ><button ><MdFilter2
-/></button ><button ><MdFilter
-/></button ><button ><MdFilter3
-/></button ><button ><MdFilter4
-/></button ><button ><MdFilter5
-/></button ><button ><MdFilter6
-/></button ><button ><MdFilter7
-/></button ><button ><MdFilter8
-/></button ><button ><MdFilter9
-/></button ><button ><MdFilter9Plus
-/></button ><button ><MdFilterBAndW
-/></button ><button ><MdFilterCenterFocus
-/></button ><button ><MdFilterDrama
-/></button ><button ><MdFilterFrames
-/></button ><button ><MdFilterHdr
-/></button ><button ><MdFilterNone
-/></button ><button ><MdFilterTiltShift
-/></button ><button ><MdFilterVintage
-/></button ><button ><MdFlare
-/></button ><button ><MdFlashAuto
-/></button ><button ><MdFlashOff
-/></button ><button ><MdFlashOn
-/></button ><button ><MdFlip
-/></button ><button ><MdGradient
-/></button ><button ><MdGrain
-/></button ><button ><MdGridOff
-/></button ><button ><MdGridOn
-/></button ><button ><MdHdrOff
-/></button ><button ><MdHdrOn
-/></button ><button ><MdHdrStrong
-/></button ><button ><MdHdrWeak
-/></button ><button ><MdHealing
-/></button ><button ><MdImage
-/></button ><button ><MdImageAspectRatio
-/></button ><button ><MdIso
-/></button ><button ><MdLandscape
-/></button ><button ><MdLeakAdd
-/></button ><button ><MdLeakRemove
-/></button ><button ><MdLens
-/></button ><button ><MdLinkedCamera
-/></button ><button ><MdLooks
-/></button ><button ><MdLooks3
-/></button ><button ><MdLooks4
-/></button ><button ><MdLooks5
-/></button ><button ><MdLooks6
-/></button ><button ><MdLooksOne
-/></button ><button ><MdLooksTwo
-/></button ><button ><MdLoupe
-/></button ><button ><MdMonochromePhotos
-/></button ><button ><MdMovieCreation
-/></button ><button ><MdMovieFilter
-/></button ><button ><MdMusicNote
-/></button ><button ><MdNature
-/></button ><button ><MdNaturePeople
-/></button ><button ><MdNavigateBefore
-/></button ><button ><MdNavigateNext
-/></button ><button ><MdPalette
-/></button ><button ><MdPanorama
-/></button ><button ><MdPanoramaFishEye
-/></button ><button ><MdPanoramaHorizontal
-/></button ><button ><MdPanoramaVertical
-/></button ><button ><MdPanoramaWideAngle
-/></button ><button ><MdPhoto
-/></button ><button ><MdPhotoAlbum
-/></button ><button ><MdPhotoCamera
-/></button ><button ><MdPhotoFilter
-/></button ><button ><MdPhotoLibrary
-/></button ><button ><MdPhotoSizeSelectActual
-/></button ><button ><MdPhotoSizeSelectLarge
-/></button ><button ><MdPhotoSizeSelectSmall
-/></button ><button ><MdPictureAsPdf
-/></button ><button ><MdPortrait
-/></button ><button ><MdRemoveRedEye
-/></button ><button ><MdRotate90DegreesCcw
-/></button ><button ><MdRotateLeft
-/></button ><button ><MdRotateRight
-/></button ><button ><MdSlideshow
-/></button ><button ><MdStraighten
-/></button ><button ><MdStyle
-/></button ><button ><MdSwitchCamera
-/></button ><button ><MdSwitchVideo
-/></button ><button ><MdTagFaces
-/></button ><button ><MdTexture
-/></button ><button ><MdTimelapse
-/></button ><button ><MdTimer10
-/></button ><button ><MdTimer
-/></button ><button ><MdTimer3
-/></button ><button ><MdTimerOff
-/></button ><button ><MdTonality
-/></button ><button ><MdTransform
-/></button ><button ><MdTune
-/></button ><button ><MdViewComfy
-/></button ><button ><MdViewCompact
-/></button ><button ><MdVignette
-/></button ><button ><MdWbAuto
-/></button ><button ><MdWbCloudy
-/></button ><button ><MdWbIncandescent
-/></button ><button ><MdWbIridescent
-/></button ><button ><MdWbSunny
-/></button ><button ><MdAddLocation
-/></button ><button ><MdBeenhere
-/></button ><button ><MdDirections
-/></button ><button ><MdDirectionsBike
-/></button ><button ><MdDirectionsBoat
-/></button ><button ><MdDirectionsBus
-/></button ><button ><MdDirectionsCar
-/></button ><button ><MdDirectionsRailway
-/></button ><button ><MdDirectionsRun
-/></button ><button ><MdDirectionsSubway
-/></button ><button ><MdDirectionsTransit
-/></button ><button ><MdDirectionsWalk
-/></button ><button ><MdEditLocation
-/></button ><button ><MdEvStation
-/></button ><button ><MdFlight
-/></button ><button ><MdHotel
-/></button ><button ><MdLayers
-/></button ><button ><MdLayersClear
-/></button ><button ><MdLocalActivity
-/></button ><button ><MdLocalAirport
-/></button ><button ><MdLocalAtm
-/></button ><button ><MdLocalBar
-/></button ><button ><MdLocalCafe
-/></button ><button ><MdLocalCarWash
-/></button ><button ><MdLocalConvenienceStore
-/></button ><button ><MdLocalDining
-/></button ><button ><MdLocalDrink
-/></button ><button ><MdLocalFlorist
-/></button ><button ><MdLocalGasStation
-/></button ><button ><MdLocalGroceryStore
-/></button ><button ><MdLocalHospital
-/></button ><button ><MdLocalHotel
-/></button ><button ><MdLocalLaundryService
-/></button ><button ><MdLocalLibrary
-/></button ><button ><MdLocalMall
-/></button ><button ><MdLocalMovies
-/></button ><button ><MdLocalOffer
-/></button ><button ><MdLocalParking
-/></button ><button ><MdLocalPharmacy
-/></button ><button ><MdLocalPhone
-/></button ><button ><MdLocalPizza
-/></button ><button ><MdLocalPlay
-/></button ><button ><MdLocalPostOffice
-/></button ><button ><MdLocalPrintshop
-/></button ><button ><MdLocalSee
-/></button ><button ><MdLocalShipping
-/></button ><button ><MdLocalTaxi
-/></button ><button ><MdMap
-/></button ><button ><MdMyLocation
-/></button ><button ><MdNavigation
-/></button ><button ><MdNearMe
-/></button ><button ><MdPersonPin
-/></button ><button ><MdPersonPinCircle
-/></button ><button ><MdPinDrop
-/></button ><button ><MdPlace
-/></button ><button ><MdRateReview
-/></button ><button ><MdRestaurant
-/></button ><button ><MdRestaurantMenu
-/></button ><button ><MdSatellite
-/></button ><button ><MdStoreMallDirectory
-/></button ><button ><MdStreetview
-/></button ><button ><MdSubway
-/></button ><button ><MdTerrain
-/></button ><button ><MdTraffic
-/></button ><button ><MdTrain
-/></button ><button ><MdTram
-/></button ><button ><MdTransferWithinAStation
-/></button ><button ><MdZoomOutMap
-/></button ><button ><MdApps
-/></button ><button ><MdArrowBack
-/></button ><button ><MdArrowDownward
-/></button ><button ><MdArrowDropDown
-/></button ><button ><MdArrowDropDownCircle
-/></button ><button ><MdArrowDropUp
-/></button ><button ><MdArrowForward
-/></button ><button ><MdArrowUpward
-/></button ><button ><MdCancel
-/></button ><button ><MdCheck
-/></button ><button ><MdChevronLeft
-/></button ><button ><MdChevronRight
-/></button ><button ><MdClose
-/></button ><button ><MdExpandLess
-/></button ><button ><MdExpandMore
-/></button ><button ><MdFirstPage
-/></button ><button ><MdFullscreen
-/></button ><button ><MdFullscreenExit
-/></button ><button ><MdLastPage
-/></button ><button ><MdMenu
-/></button ><button ><MdMoreHoriz
-/></button ><button ><MdMoreVert
-/></button ><button ><MdRefresh
-/></button ><button ><MdSubdirectoryArrowLeft
-/></button ><button ><MdSubdirectoryArrowRight
-/></button ><button ><MdUnfoldLess
-/></button ><button ><MdUnfoldMore
-/></button ><button ><MdAdb
-/></button ><button ><MdAirlineSeatFlat
-/></button ><button ><MdAirlineSeatFlatAngled
-/></button ><button ><MdAirlineSeatIndividualSuite
-/></button ><button ><MdAirlineSeatLegroomExtra
-/></button ><button ><MdAirlineSeatLegroomNormal
-/></button ><button ><MdAirlineSeatLegroomReduced
-/></button ><button ><MdAirlineSeatReclineExtra
-/></button ><button ><MdAirlineSeatReclineNormal
-/></button ><button ><MdBluetoothAudio
-/></button ><button ><MdConfirmationNumber
-/></button ><button ><MdDiscFull
-/></button ><button ><MdDoNotDisturb
-/></button ><button ><MdDoNotDisturbAlt
-/></button ><button ><MdDoNotDisturbOff
-/></button ><button ><MdDoNotDisturbOn
-/></button ><button ><MdDriveEta
-/></button ><button ><MdEnhancedEncryption
-/></button ><button ><MdEventAvailable
-/></button ><button ><MdEventBusy
-/></button ><button ><MdEventNote
-/></button ><button ><MdFolderSpecial
-/></button ><button ><MdLiveTv
-/></button ><button ><MdMms
-/></button ><button ><MdMore
-/></button ><button ><MdNetworkCheck
-/></button ><button ><MdNetworkLocked
-/></button ><button ><MdNoEncryption
-/></button ><button ><MdOndemandVideo
-/></button ><button ><MdPersonalVideo
-/></button ><button ><MdPhoneBluetoothSpeaker
-/></button ><button ><MdPhoneForwarded
-/></button ><button ><MdPhoneInTalk
-/></button ><button ><MdPhoneLocked
-/></button ><button ><MdPhoneMissed
-/></button ><button ><MdPhonePaused
-/></button ><button ><MdPower
-/></button ><button ><MdPriorityHigh
-/></button ><button ><MdRvHookup
-/></button ><button ><MdSdCard
-/></button ><button ><MdSimCardAlert
-/></button ><button ><MdSms
-/></button ><button ><MdSmsFailed
-/></button ><button ><MdSync
-/></button ><button ><MdSyncDisabled
-/></button ><button ><MdSyncProblem
-/></button ><button ><MdSystemUpdate
-/></button ><button ><MdTapAndPlay
-/></button ><button ><MdTimeToLeave
-/></button ><button ><MdVibration
-/></button ><button ><MdVoiceChat
-/></button ><button ><MdVpnLock
-/></button ><button ><MdWc
-/></button ><button ><MdWifi
-/></button ><button ><MdAcUnit
-/></button ><button ><MdAirportShuttle
-/></button ><button ><MdAllInclusive
-/></button ><button ><MdBeachAccess
-/></button ><button ><MdBusinessCenter
-/></button ><button ><MdCasino
-/></button ><button ><MdChildCare
-/></button ><button ><MdChildFriendly
-/></button ><button ><MdFitnessCenter
-/></button ><button ><MdFreeBreakfast
-/></button ><button ><MdGolfCourse
-/></button ><button ><MdHotTub
-/></button ><button ><MdKitchen
-/></button ><button ><MdPool
-/></button ><button ><MdRoomService
-/></button ><button ><MdSmokeFree
-/></button ><button ><MdSmokingRooms
-/></button ><button ><MdSpa
-/></button ><button ><MdCake
-/></button ><button ><MdDomain
-/></button ><button ><MdGroup
-/></button ><button ><MdGroupAdd
-/></button ><button ><MdLocationCity
-/></button ><button ><MdMood
-/></button ><button ><MdMoodBad
-/></button ><button ><MdNotifications
-/></button ><button ><MdNotificationsActive
-/></button ><button ><MdNotificationsNone
-/></button ><button ><MdNotificationsOff
-/></button ><button ><MdNotificationsPaused
-/></button ><button ><MdPages
-/></button ><button ><MdPartyMode
-/></button ><button ><MdPeople
-/></button ><button ><MdPeopleOutline
-/></button ><button ><MdPerson
-/></button ><button ><MdPersonAdd
-/></button ><button ><MdPersonOutline
-/></button ><button ><MdPlusOne
-/></button ><button ><MdPoll
-/></button ><button ><MdPublic
-/></button ><button ><MdSchool
-/></button ><button ><MdSentimentDissatisfied
-/></button ><button ><MdSentimentNeutral
-/></button ><button ><MdSentimentSatisfied
-/></button ><button ><MdSentimentVeryDissatisfied
-/></button ><button ><MdSentimentVerySatisfied
-/></button ><button ><MdShare
-/></button ><button ><MdWhatshot
-/></button ><button ><MdCheckBox
-/></button ><button ><MdCheckBoxOutlineBlank
-/></button ><button ><MdIndeterminateCheckBox
-/></button ><button ><MdRadioButtonChecked
-/></button ><button ><MdRadioButtonUnchecked
-/></button ><button ><MdStar
-/></button ><button ><MdStarBorder
-/></button ><button ><MdStarHalf/></button >
-      
+      <button color="primary"><Icon>ac_unit</Icon></button>
+<button color="primary"><Icon>access_alarm</Icon></button>
+<button color="primary"><Icon>access_alarms</Icon></button>
+<button color="primary"><Icon>access_time</Icon></button>
+<button color="primary"><Icon>accessibility</Icon></button>
+<button color="primary"><Icon>accessibility_new</Icon></button>
+<button color="primary"><Icon>accessible</Icon></button>
+<button color="primary"><Icon>accessible_forward</Icon></button>
+<button color="primary"><Icon>account_balance</Icon></button>
+<button color="primary"><Icon>account_balance_wallet</Icon></button>
+<button color="primary"><Icon>account_box</Icon></button>
+<button color="primary"><Icon>account_circle</Icon></button>
+<button color="primary"><Icon>account_tree</Icon></button>
+<button color="primary"><Icon>adb</Icon></button>
+<button color="primary"><Icon>add</Icon></button>
+<button color="primary"><Icon>add_a_photo</Icon></button>
+<button color="primary"><Icon>add_alarm</Icon></button>
+<button color="primary"><Icon>add_alert</Icon></button>
+<button color="primary"><Icon>add_box</Icon></button>
+<button color="primary"><Icon>add_circle</Icon></button>
+<button color="primary"><Icon>add_circle_outline</Icon></button>
+<button color="primary"><Icon>add_comment</Icon></button>
+<button color="primary"><Icon>add_ic_call</Icon></button>
+<button color="primary"><Icon>add_location</Icon></button>
+<button color="primary"><Icon>add_photo_alternate</Icon></button>
+<button color="primary"><Icon>add_shopping_cart</Icon></button>
+<button color="primary"><Icon>add_to_home_screen</Icon></button>
+<button color="primary"><Icon>add_to_photos</Icon></button>
+<button color="primary"><Icon>add_to_queue</Icon></button>
+<button color="primary"><Icon>adjust</Icon></button>
+<button color="primary"><Icon>airline_seat_flat</Icon></button>
+<button color="primary"><Icon>airline_seat_flat_angled</Icon></button>
+<button color="primary"><Icon>airline_seat_individual_suite</Icon></button>
+<button color="primary"><Icon>airline_seat_legroom_extra</Icon></button>
+<button color="primary"><Icon>airline_seat_legroom_normal</Icon></button>
+<button color="primary"><Icon>airline_seat_legroom_reduced</Icon></button>
+<button color="primary"><Icon>airline_seat_recline_extra</Icon></button>
+<button color="primary"><Icon>airline_seat_recline_normal</Icon></button>
+<button color="primary"><Icon>airplanemode_active</Icon></button>
+<button color="primary"><Icon>airplanemode_inactive</Icon></button>
+<button color="primary"><Icon>airplay</Icon></button>
+<button color="primary"><Icon>airport_shuttle</Icon></button>
+<button color="primary"><Icon>alarm</Icon></button>
+<button color="primary"><Icon>alarm_add</Icon></button>
+<button color="primary"><Icon>alarm_off</Icon></button>
+<button color="primary"><Icon>alarm_on</Icon></button>
+<button color="primary"><Icon>album</Icon></button>
+<button color="primary"><Icon>all_inbox</Icon></button>
+<button color="primary"><Icon>all_inclusive</Icon></button>
+<button color="primary"><Icon>all_out</Icon></button>
+<button color="primary"><Icon>alternate_email</Icon></button>
+<button color="primary"><Icon>amp_stories</Icon></button>
+<button color="primary"><Icon>android</Icon></button>
+<button color="primary"><Icon>announcement</Icon></button>
+<button color="primary"><Icon>apartment</Icon></button>
+<button color="primary"><Icon>apple</Icon></button>
+<button color="primary"><Icon>apps</Icon></button>
+<button color="primary"><Icon>archive</Icon></button>
+<button color="primary"><Icon>arrow_back</Icon></button>
+<button color="primary"><Icon>arrow_back_ios</Icon></button>
+<button color="primary"><Icon>arrow_downward</Icon></button>
+<button color="primary"><Icon>arrow_drop_down</Icon></button>
+<button color="primary"><Icon>arrow_drop_down_circle</Icon></button>
+<button color="primary"><Icon>arrow_drop_up</Icon></button>
+<button color="primary"><Icon>arrow_forward</Icon></button>
+<button color="primary"><Icon>arrow_forward_ios</Icon></button>
+<button color="primary"><Icon>arrow_left</Icon></button>
+<button color="primary"><Icon>arrow_right</Icon></button>
+<button color="primary"><Icon>arrow_right_alt</Icon></button>
+<button color="primary"><Icon>arrow_upward</Icon></button>
+<button color="primary"><Icon>art_track</Icon></button>
+<button color="primary"><Icon>aspect_ratio</Icon></button>
+<button color="primary"><Icon>assessment</Icon></button>
+<button color="primary"><Icon>assignment</Icon></button>
+<button color="primary"><Icon>assignment_ind</Icon></button>
+<button color="primary"><Icon>assignment_late</Icon></button>
+<button color="primary"><Icon>assignment_return</Icon></button>
+<button color="primary"><Icon>assignment_returned</Icon></button>
+<button color="primary"><Icon>assignment_turned_in</Icon></button>
+<button color="primary"><Icon>assistant</Icon></button>
+<button color="primary"><Icon>assistant_photo</Icon></button>
+<button color="primary"><Icon>atm</Icon></button>
+<button color="primary"><Icon>attach_file</Icon></button>
+<button color="primary"><Icon>attach_money</Icon></button>
+<button color="primary"><Icon>attachment</Icon></button>
+<button color="primary"><Icon>audiotrack</Icon></button>
+<button color="primary"><Icon>autorenew</Icon></button>
+<button color="primary"><Icon>av_timer</Icon></button>
+<button color="primary"><Icon>backspace</Icon></button>
+<button color="primary"><Icon>backup</Icon></button>
+<button color="primary"><Icon>ballot</Icon></button>
+<button color="primary"><Icon>bar_chart</Icon></button>
+<button color="primary"><Icon>bathtub</Icon></button>
+<button color="primary"><Icon>battery20</Icon></button>
+<button color="primary"><Icon>battery30</Icon></button>
+<button color="primary"><Icon>battery50</Icon></button>
+<button color="primary"><Icon>battery60</Icon></button>
+<button color="primary"><Icon>battery80</Icon></button>
+<button color="primary"><Icon>battery90</Icon></button>
+<button color="primary"><Icon>battery_alert</Icon></button>
+<button color="primary"><Icon>battery_charging20</Icon></button>
+<button color="primary"><Icon>battery_charging30</Icon></button>
+<button color="primary"><Icon>battery_charging50</Icon></button>
+<button color="primary"><Icon>battery_charging60</Icon></button>
+<button color="primary"><Icon>battery_charging80</Icon></button>
+<button color="primary"><Icon>battery_charging90</Icon></button>
+<button color="primary"><Icon>battery_charging_full</Icon></button>
+<button color="primary"><Icon>battery_full</Icon></button>
+<button color="primary"><Icon>battery_std</Icon></button>
+<button color="primary"><Icon>battery_unknown</Icon></button>
+<button color="primary"><Icon>beach_access</Icon></button>
+<button color="primary"><Icon>beenhere</Icon></button>
+<button color="primary"><Icon>block</Icon></button>
+<button color="primary"><Icon>bluetooth</Icon></button>
+<button color="primary"><Icon>bluetooth_audio</Icon></button>
+<button color="primary"><Icon>bluetooth_connected</Icon></button>
+<button color="primary"><Icon>bluetooth_disabled</Icon></button>
+<button color="primary"><Icon>bluetooth_searching</Icon></button>
+<button color="primary"><Icon>blur_circular</Icon></button>
+<button color="primary"><Icon>blur_linear</Icon></button>
+<button color="primary"><Icon>blur_off</Icon></button>
+<button color="primary"><Icon>blur_on</Icon></button>
+<button color="primary"><Icon>book</Icon></button>
+<button color="primary"><Icon>bookmark</Icon></button>
+<button color="primary"><Icon>bookmark_border</Icon></button>
+<button color="primary"><Icon>bookmarks</Icon></button>
+<button color="primary"><Icon>border_all</Icon></button>
+<button color="primary"><Icon>border_bottom</Icon></button>
+<button color="primary"><Icon>border_clear</Icon></button>
+<button color="primary"><Icon>border_color</Icon></button>
+<button color="primary"><Icon>border_horizontal</Icon></button>
+<button color="primary"><Icon>border_inner</Icon></button>
+<button color="primary"><Icon>border_left</Icon></button>
+<button color="primary"><Icon>border_outer</Icon></button>
+<button color="primary"><Icon>border_right</Icon></button>
+<button color="primary"><Icon>border_style</Icon></button>
+<button color="primary"><Icon>border_top</Icon></button>
+<button color="primary"><Icon>border_vertical</Icon></button>
+<button color="primary"><Icon>branding_watermark</Icon></button>
+<button color="primary"><Icon>brightness1</Icon></button>
+<button color="primary"><Icon>brightness2</Icon></button>
+<button color="primary"><Icon>brightness3</Icon></button>
+<button color="primary"><Icon>brightness4</Icon></button>
+<button color="primary"><Icon>brightness5</Icon></button>
+<button color="primary"><Icon>brightness6</Icon></button>
+<button color="primary"><Icon>brightness7</Icon></button>
+<button color="primary"><Icon>brightness_auto</Icon></button>
+<button color="primary"><Icon>brightness_high</Icon></button>
+<button color="primary"><Icon>brightness_low</Icon></button>
+<button color="primary"><Icon>brightness_medium</Icon></button>
+<button color="primary"><Icon>broken_image</Icon></button>
+<button color="primary"><Icon>brush</Icon></button>
+<button color="primary"><Icon>bubble_chart</Icon></button>
+<button color="primary"><Icon>bug_report</Icon></button>
+<button color="primary"><Icon>build</Icon></button>
+<button color="primary"><Icon>burst_mode</Icon></button>
+<button color="primary"><Icon>business</Icon></button>
+<button color="primary"><Icon>business_center</Icon></button>
+<button color="primary"><Icon>cached</Icon></button>
+<button color="primary"><Icon>cake</Icon></button>
+<button color="primary"><Icon>calendar_today</Icon></button>
+<button color="primary"><Icon>calendar_view_day</Icon></button>
+<button color="primary"><Icon>call</Icon></button>
+<button color="primary"><Icon>call_end</Icon></button>
+<button color="primary"><Icon>call_made</Icon></button>
+<button color="primary"><Icon>call_merge</Icon></button>
+<button color="primary"><Icon>call_missed</Icon></button>
+<button color="primary"><Icon>call_missed_outgoing</Icon></button>
+<button color="primary"><Icon>call_received</Icon></button>
+<button color="primary"><Icon>call_split</Icon></button>
+<button color="primary"><Icon>call_to_action</Icon></button>
+<button color="primary"><Icon>camera</Icon></button>
+<button color="primary"><Icon>camera_alt</Icon></button>
+<button color="primary"><Icon>camera_enhance</Icon></button>
+<button color="primary"><Icon>camera_front</Icon></button>
+<button color="primary"><Icon>camera_rear</Icon></button>
+<button color="primary"><Icon>camera_roll</Icon></button>
+<button color="primary"><Icon>cancel</Icon></button>
+<button color="primary"><Icon>cancel_presentation</Icon></button>
+<button color="primary"><Icon>cancel_schedule_send</Icon></button>
+<button color="primary"><Icon>card_giftcard</Icon></button>
+<button color="primary"><Icon>card_membership</Icon></button>
+<button color="primary"><Icon>card_travel</Icon></button>
+<button color="primary"><Icon>casino</Icon></button>
+<button color="primary"><Icon>cast</Icon></button>
+<button color="primary"><Icon>cast_connected</Icon></button>
+<button color="primary"><Icon>cast_for_education</Icon></button>
+<button color="primary"><Icon>category</Icon></button>
+<button color="primary"><Icon>cell_wifi</Icon></button>
+<button color="primary"><Icon>center_focus_strong</Icon></button>
+<button color="primary"><Icon>center_focus_weak</Icon></button>
+<button color="primary"><Icon>change_history</Icon></button>
+<button color="primary"><Icon>chat</Icon></button>
+<button color="primary"><Icon>chat_bubble</Icon></button>
+<button color="primary"><Icon>chat_bubble_outline</Icon></button>
+<button color="primary"><Icon>check</Icon></button>
+<button color="primary"><Icon>check_box</Icon></button>
+<button color="primary"><Icon>check_box_outline_blank</Icon></button>
+<button color="primary"><Icon>check_circle</Icon></button>
+<button color="primary"><Icon>check_circle_outline</Icon></button>
+<button color="primary"><Icon>chevron_left</Icon></button>
+<button color="primary"><Icon>chevron_right</Icon></button>
+<button color="primary"><Icon>child_care</Icon></button>
+<button color="primary"><Icon>child_friendly</Icon></button>
+<button color="primary"><Icon>chrome_reader_mode</Icon></button>
+<button color="primary"><Icon>class</Icon></button>
+<button color="primary"><Icon>clear</Icon></button>
+<button color="primary"><Icon>clear_all</Icon></button>
+<button color="primary"><Icon>close</Icon></button>
+<button color="primary"><Icon>closed_caption</Icon></button>
+<button color="primary"><Icon>cloud</Icon></button>
+<button color="primary"><Icon>cloud_circle</Icon></button>
+<button color="primary"><Icon>cloud_done</Icon></button>
+<button color="primary"><Icon>cloud_download</Icon></button>
+<button color="primary"><Icon>cloud_off</Icon></button>
+<button color="primary"><Icon>cloud_queue</Icon></button>
+<button color="primary"><Icon>cloud_upload</Icon></button>
+<button color="primary"><Icon>code</Icon></button>
+<button color="primary"><Icon>collections</Icon></button>
+<button color="primary"><Icon>collections_bookmark</Icon></button>
+<button color="primary"><Icon>color_lens</Icon></button>
+<button color="primary"><Icon>colorize</Icon></button>
+<button color="primary"><Icon>comment</Icon></button>
+<button color="primary"><Icon>commute</Icon></button>
+<button color="primary"><Icon>compare</Icon></button>
+<button color="primary"><Icon>compare_arrows</Icon></button>
+<button color="primary"><Icon>compass_calibration</Icon></button>
+<button color="primary"><Icon>computer</Icon></button>
+<button color="primary"><Icon>confirmation_number</Icon></button>
+<button color="primary"><Icon>contact_mail</Icon></button>
+<button color="primary"><Icon>contact_phone</Icon></button>
+<button color="primary"><Icon>contact_support</Icon></button>
+<button color="primary"><Icon>contactless</Icon></button>
+<button color="primary"><Icon>contacts</Icon></button>
+<button color="primary"><Icon>control_camera</Icon></button>
+<button color="primary"><Icon>control_point</Icon></button>
+<button color="primary"><Icon>control_point_duplicate</Icon></button>
+<button color="primary"><Icon>copyright</Icon></button>
+<button color="primary"><Icon>create</Icon></button>
+<button color="primary"><Icon>create_new_folder</Icon></button>
+<button color="primary"><Icon>credit_card</Icon></button>
+<button color="primary"><Icon>crop</Icon></button>
+<button color="primary"><Icon>crop169</Icon></button>
+<button color="primary"><Icon>crop32</Icon></button>
+<button color="primary"><Icon>crop54</Icon></button>
+<button color="primary"><Icon>crop75</Icon></button>
+<button color="primary"><Icon>crop_din</Icon></button>
+<button color="primary"><Icon>crop_free</Icon></button>
+<button color="primary"><Icon>crop_landscape</Icon></button>
+<button color="primary"><Icon>crop_original</Icon></button>
+<button color="primary"><Icon>crop_portrait</Icon></button>
+<button color="primary"><Icon>crop_rotate</Icon></button>
+<button color="primary"><Icon>crop_square</Icon></button>
+<button color="primary"><Icon>dashboard</Icon></button>
+<button color="primary"><Icon>data_usage</Icon></button>
+<button color="primary"><Icon>date_range</Icon></button>
+<button color="primary"><Icon>deck</Icon></button>
+<button color="primary"><Icon>dehaze</Icon></button>
+<button color="primary"><Icon>delete</Icon></button>
+<button color="primary"><Icon>delete_forever</Icon></button>
+<button color="primary"><Icon>delete_outline</Icon></button>
+<button color="primary"><Icon>delete_sweep</Icon></button>
+<button color="primary"><Icon>departure_board</Icon></button>
+<button color="primary"><Icon>description</Icon></button>
+<button color="primary"><Icon>desktop_access_disabled</Icon></button>
+<button color="primary"><Icon>desktop_mac</Icon></button>
+<button color="primary"><Icon>desktop_windows</Icon></button>
+<button color="primary"><Icon>details</Icon></button>
+<button color="primary"><Icon>developer_board</Icon></button>
+<button color="primary"><Icon>developer_mode</Icon></button>
+<button color="primary"><Icon>device_hub</Icon></button>
+<button color="primary"><Icon>device_unknown</Icon></button>
+<button color="primary"><Icon>devices</Icon></button>
+<button color="primary"><Icon>devices_other</Icon></button>
+<button color="primary"><Icon>dialer_sip</Icon></button>
+<button color="primary"><Icon>dialpad</Icon></button>
+<button color="primary"><Icon>directions</Icon></button>
+<button color="primary"><Icon>directions_bike</Icon></button>
+<button color="primary"><Icon>directions_boat</Icon></button>
+<button color="primary"><Icon>directions_bus</Icon></button>
+<button color="primary"><Icon>directions_car</Icon></button>
+<button color="primary"><Icon>directions_railway</Icon></button>
+<button color="primary"><Icon>directions_run</Icon></button>
+<button color="primary"><Icon>directions_subway</Icon></button>
+<button color="primary"><Icon>directions_transit</Icon></button>
+<button color="primary"><Icon>directions_walk</Icon></button>
+<button color="primary"><Icon>disc_full</Icon></button>
+<button color="primary"><Icon>dns</Icon></button>
+<button color="primary"><Icon>dock</Icon></button>
+<button color="primary"><Icon>domain</Icon></button>
+<button color="primary"><Icon>domain_disabled</Icon></button>
+<button color="primary"><Icon>done</Icon></button>
+<button color="primary"><Icon>done_all</Icon></button>
+<button color="primary"><Icon>done_outline</Icon></button>
+<button color="primary"><Icon>donut_large</Icon></button>
+<button color="primary"><Icon>donut_small</Icon></button>
+<button color="primary"><Icon>double_arrow</Icon></button>
+<button color="primary"><Icon>drafts</Icon></button>
+<button color="primary"><Icon>drag_handle</Icon></button>
+<button color="primary"><Icon>drag_indicator</Icon></button>
+<button color="primary"><Icon>drive_eta</Icon></button>
+<button color="primary"><Icon>duo</Icon></button>
+<button color="primary"><Icon>dvr</Icon></button>
+<button color="primary"><Icon>dynamic_feed</Icon></button>
+<button color="primary"><Icon>eco</Icon></button>
+<button color="primary"><Icon>edit</Icon></button>
+<button color="primary"><Icon>edit_attributes</Icon></button>
+<button color="primary"><Icon>edit_location</Icon></button>
+<button color="primary"><Icon>eject</Icon></button>
+<button color="primary"><Icon>email</Icon></button>
+<button color="primary"><Icon>emoji_emotions</Icon></button>
+<button color="primary"><Icon>emoji_events</Icon></button>
+<button color="primary"><Icon>emoji_flags</Icon></button>
+<button color="primary"><Icon>emoji_food_beverage</Icon></button>
+<button color="primary"><Icon>emoji_nature</Icon></button>
+<button color="primary"><Icon>emoji_objects</Icon></button>
+<button color="primary"><Icon>emoji_people</Icon></button>
+<button color="primary"><Icon>emoji_symbols</Icon></button>
+<button color="primary"><Icon>emoji_transportation</Icon></button>
+<button color="primary"><Icon>enhanced_encryption</Icon></button>
+<button color="primary"><Icon>equalizer</Icon></button>
+<button color="primary"><Icon>error</Icon></button>
+<button color="primary"><Icon>error_outline</Icon></button>
+<button color="primary"><Icon>euro</Icon></button>
+<button color="primary"><Icon>euro_symbol</Icon></button>
+<button color="primary"><Icon>ev_station</Icon></button>
+<button color="primary"><Icon>event</Icon></button>
+<button color="primary"><Icon>event_available</Icon></button>
+<button color="primary"><Icon>event_busy</Icon></button>
+<button color="primary"><Icon>event_note</Icon></button>
+<button color="primary"><Icon>event_seat</Icon></button>
+<button color="primary"><Icon>exit_to_app</Icon></button>
+<button color="primary"><Icon>expand_less</Icon></button>
+<button color="primary"><Icon>expand_more</Icon></button>
+<button color="primary"><Icon>explicit</Icon></button>
+<button color="primary"><Icon>explore</Icon></button>
+<button color="primary"><Icon>explore_off</Icon></button>
+<button color="primary"><Icon>exposure</Icon></button>
+<button color="primary"><Icon>exposure_neg1</Icon></button>
+<button color="primary"><Icon>exposure_neg2</Icon></button>
+<button color="primary"><Icon>exposure_plus1</Icon></button>
+<button color="primary"><Icon>exposure_plus2</Icon></button>
+<button color="primary"><Icon>exposureZero</Icon></button>
+<button color="primary"><Icon>extension</Icon></button>
+<button color="primary"><Icon>face</Icon></button>
+<button color="primary"><Icon>facebook</Icon></button>
+<button color="primary"><Icon>fast_forward</Icon></button>
+<button color="primary"><Icon>fast_rewind</Icon></button>
+<button color="primary"><Icon>fastfood</Icon></button>
+<button color="primary"><Icon>favorite</Icon></button>
+<button color="primary"><Icon>favorite_border</Icon></button>
+<button color="primary"><Icon>featured_play_list</Icon></button>
+<button color="primary"><Icon>featured_video</Icon></button>
+<button color="primary"><Icon>feedback</Icon></button>
+<button color="primary"><Icon>fiber_dvr</Icon></button>
+<button color="primary"><Icon>fiber_manual_record</Icon></button>
+<button color="primary"><Icon>fiber_new</Icon></button>
+<button color="primary"><Icon>fiber_pin</Icon></button>
+<button color="primary"><Icon>fiber_smart_record</Icon></button>
+<button color="primary"><Icon>file_copy</Icon></button>
+<button color="primary"><Icon>filter</Icon></button>
+<button color="primary"><Icon>filter1</Icon></button>
+<button color="primary"><Icon>filter2</Icon></button>
+<button color="primary"><Icon>filter3</Icon></button>
+<button color="primary"><Icon>filter4</Icon></button>
+<button color="primary"><Icon>filter5</Icon></button>
+<button color="primary"><Icon>filter6</Icon></button>
+<button color="primary"><Icon>filter7</Icon></button>
+<button color="primary"><Icon>filter8</Icon></button>
+<button color="primary"><Icon>filter9</Icon></button>
+<button color="primary"><Icon>filter9_plus</Icon></button>
+<button color="primary"><Icon>filter_b_and_w</Icon></button>
+<button color="primary"><Icon>filter_center_focus</Icon></button>
+<button color="primary"><Icon>filter_drama</Icon></button>
+<button color="primary"><Icon>filter_frames</Icon></button>
+<button color="primary"><Icon>filter_hdr</Icon></button>
+<button color="primary"><Icon>filter_list</Icon></button>
+<button color="primary"><Icon>filter_none</Icon></button>
+<button color="primary"><Icon>filter_tilt_shift</Icon></button>
+<button color="primary"><Icon>filter_vintage</Icon></button>
+<button color="primary"><Icon>find_in_page</Icon></button>
+<button color="primary"><Icon>find_replace</Icon></button>
+<button color="primary"><Icon>fingerprint</Icon></button>
+<button color="primary"><Icon>fireplace</Icon></button>
+<button color="primary"><Icon>first_page</Icon></button>
+<button color="primary"><Icon>fitness_center</Icon></button>
+<button color="primary"><Icon>flag</Icon></button>
+<button color="primary"><Icon>flare</Icon></button>
+<button color="primary"><Icon>flash_auto</Icon></button>
+<button color="primary"><Icon>flash_off</Icon></button>
+<button color="primary"><Icon>flash_on</Icon></button>
+<button color="primary"><Icon>flight</Icon></button>
+<button color="primary"><Icon>flight_land</Icon></button>
+<button color="primary"><Icon>flight_takeoff</Icon></button>
+<button color="primary"><Icon>flip</Icon></button>
+<button color="primary"><Icon>flip_camera_android</Icon></button>
+<button color="primary"><Icon>flip_camera_ios</Icon></button>
+<button color="primary"><Icon>flip_to_back</Icon></button>
+<button color="primary"><Icon>flip_to_front</Icon></button>
+<button color="primary"><Icon>folder</Icon></button>
+<button color="primary"><Icon>folder_open</Icon></button>
+<button color="primary"><Icon>folder_shared</Icon></button>
+<button color="primary"><Icon>folder_special</Icon></button>
+<button color="primary"><Icon>font_download</Icon></button>
+<button color="primary"><Icon>format_align_center</Icon></button>
+<button color="primary"><Icon>format_align_justify</Icon></button>
+<button color="primary"><Icon>format_align_left</Icon></button>
+<button color="primary"><Icon>format_align_right</Icon></button>
+<button color="primary"><Icon>format_bold</Icon></button>
+<button color="primary"><Icon>format_clear</Icon></button>
+<button color="primary"><Icon>format_color_fill</Icon></button>
+<button color="primary"><Icon>format_color_reset</Icon></button>
+<button color="primary"><Icon>format_color_text</Icon></button>
+<button color="primary"><Icon>format_indent_decrease</Icon></button>
+<button color="primary"><Icon>format_indent_increase</Icon></button>
+<button color="primary"><Icon>format_italic</Icon></button>
+<button color="primary"><Icon>format_line_spacing</Icon></button>
+<button color="primary"><Icon>format_list_bulleted</Icon></button>
+<button color="primary"><Icon>format_list_numbered</Icon></button>
+<button color="primary"><Icon>format_list_numbered_rtl</Icon></button>
+<button color="primary"><Icon>format_paint</Icon></button>
+<button color="primary"><Icon>format_quote</Icon></button>
+<button color="primary"><Icon>format_shapes</Icon></button>
+<button color="primary"><Icon>format_size</Icon></button>
+<button color="primary"><Icon>format_strikethrough</Icon></button>
+<button color="primary"><Icon>format_textdirection_l_to_r</Icon></button>
+<button color="primary"><Icon>format_textdirection_r_to_l</Icon></button>
+<button color="primary"><Icon>format_underlined</Icon></button>
+<button color="primary"><Icon>forum</Icon></button>
+<button color="primary"><Icon>forward</Icon></button>
+<button color="primary"><Icon>forward10</Icon></button>
+<button color="primary"><Icon>forward30</Icon></button>
+<button color="primary"><Icon>forward5</Icon></button>
+<button color="primary"><Icon>four_k</Icon></button>
+<button color="primary"><Icon>free_breakfast</Icon></button>
+<button color="primary"><Icon>fullscreen</Icon></button>
+<button color="primary"><Icon>fullscreen_exit</Icon></button>
+<button color="primary"><Icon>functions</Icon></button>
+<button color="primary"><Icon>g_translate</Icon></button>
+<button color="primary"><Icon>gamepad</Icon></button>
+<button color="primary"><Icon>games</Icon></button>
+<button color="primary"><Icon>gavel</Icon></button>
+<button color="primary"><Icon>gesture</Icon></button>
+<button color="primary"><Icon>get_app</Icon></button>
+<button color="primary"><Icon>gif</Icon></button>
+<button color="primary"><Icon>git_hub</Icon></button>
+<button color="primary"><Icon>golf_course</Icon></button>
+<button color="primary"><Icon>gps_fixed</Icon></button>
+<button color="primary"><Icon>gps_not_fixed</Icon></button>
+<button color="primary"><Icon>gps_off</Icon></button>
+<button color="primary"><Icon>grade</Icon></button>
+<button color="primary"><Icon>gradient</Icon></button>
+<button color="primary"><Icon>grain</Icon></button>
+<button color="primary"><Icon>graphic_eq</Icon></button>
+<button color="primary"><Icon>grid_off</Icon></button>
+<button color="primary"><Icon>grid_on</Icon></button>
+<button color="primary"><Icon>group</Icon></button>
+<button color="primary"><Icon>group_add</Icon></button>
+<button color="primary"><Icon>group_work</Icon></button>
+<button color="primary"><Icon>hd</Icon></button>
+<button color="primary"><Icon>hdr_off</Icon></button>
+<button color="primary"><Icon>hdr_on</Icon></button>
+<button color="primary"><Icon>hdr_strong</Icon></button>
+<button color="primary"><Icon>hdr_weak</Icon></button>
+<button color="primary"><Icon>headset</Icon></button>
+<button color="primary"><Icon>headset_mic</Icon></button>
+<button color="primary"><Icon>healing</Icon></button>
+<button color="primary"><Icon>hearing</Icon></button>
+<button color="primary"><Icon>height</Icon></button>
+<button color="primary"><Icon>help</Icon></button>
+<button color="primary"><Icon>help_outline</Icon></button>
+<button color="primary"><Icon>high_quality</Icon></button>
+<button color="primary"><Icon>highlight</Icon></button>
+<button color="primary"><Icon>highlight_off</Icon></button>
+<button color="primary"><Icon>history</Icon></button>
+<button color="primary"><Icon>home</Icon></button>
+<button color="primary"><Icon>home_work</Icon></button>
+<button color="primary"><Icon>horizontal_split</Icon></button>
+<button color="primary"><Icon>hot_tub</Icon></button>
+<button color="primary"><Icon>hotel</Icon></button>
+<button color="primary"><Icon>hourglass_empty</Icon></button>
+<button color="primary"><Icon>hourglass_full</Icon></button>
+<button color="primary"><Icon>house</Icon></button>
+<button color="primary"><Icon>how_to_reg</Icon></button>
+<button color="primary"><Icon>how_to_vote</Icon></button>
+<button color="primary"><Icon>http</Icon></button>
+<button color="primary"><Icon>https</Icon></button>
+<button color="primary"><Icon>image</Icon></button>
+<button color="primary"><Icon>image_aspect_ratio</Icon></button>
+<button color="primary"><Icon>image_search</Icon></button>
+<button color="primary"><Icon>import_contacts</Icon></button>
+<button color="primary"><Icon>import_export</Icon></button>
+<button color="primary"><Icon>important_devices</Icon></button>
+<button color="primary"><Icon>inbox</Icon></button>
+<button color="primary"><Icon>indeterminate_check_box</Icon></button>
+<button color="primary"><Icon>info</Icon></button>
+<button color="primary"><Icon>input</Icon></button>
+<button color="primary"><Icon>insert_chart</Icon></button>
+<button color="primary"><Icon>insert_comment</Icon></button>
+<button color="primary"><Icon>insert_drive_file</Icon></button>
+<button color="primary"><Icon>insert_emoticon</Icon></button>
+<button color="primary"><Icon>insert_invitation</Icon></button>
+<button color="primary"><Icon>insert_link</Icon></button>
+<button color="primary"><Icon>insert_photo</Icon></button>
+<button color="primary"><Icon>instagram</Icon></button>
+<button color="primary"><Icon>invert_colors</Icon></button>
+<button color="primary"><Icon>invert_colors_off</Icon></button>
+<button color="primary"><Icon>iso</Icon></button>
+<button color="primary"><Icon>keyboard</Icon></button>
+<button color="primary"><Icon>keyboard_arrow_down</Icon></button>
+<button color="primary"><Icon>keyboard_arrow_left</Icon></button>
+<button color="primary"><Icon>keyboard_arrow_right</Icon></button>
+<button color="primary"><Icon>keyboard_arrow_up</Icon></button>
+<button color="primary"><Icon>keyboard_backspace</Icon></button>
+<button color="primary"><Icon>keyboard_capslock</Icon></button>
+<button color="primary"><Icon>keyboard_hide</Icon></button>
+<button color="primary"><Icon>keyboard_return</Icon></button>
+<button color="primary"><Icon>keyboard_tab</Icon></button>
+<button color="primary"><Icon>keyboard_voice</Icon></button>
+<button color="primary"><Icon>king_bed</Icon></button>
+<button color="primary"><Icon>kitchen</Icon></button>
+<button color="primary"><Icon>label</Icon></button>
+<button color="primary"><Icon>label_important</Icon></button>
+<button color="primary"><Icon>label_off</Icon></button>
+<button color="primary"><Icon>landscape</Icon></button>
+<button color="primary"><Icon>language</Icon></button>
+<button color="primary"><Icon>laptop</Icon></button>
+<button color="primary"><Icon>laptop_chromebook</Icon></button>
+<button color="primary"><Icon>laptop_mac</Icon></button>
+<button color="primary"><Icon>laptop_windows</Icon></button>
+<button color="primary"><Icon>last_page</Icon></button>
+<button color="primary"><Icon>launch</Icon></button>
+<button color="primary"><Icon>layers</Icon></button>
+<button color="primary"><Icon>layers_clear</Icon></button>
+<button color="primary"><Icon>leak_add</Icon></button>
+<button color="primary"><Icon>leak_remove</Icon></button>
+<button color="primary"><Icon>lens</Icon></button>
+<button color="primary"><Icon>library_add</Icon></button>
+<button color="primary"><Icon>library_add_check</Icon></button>
+<button color="primary"><Icon>library_books</Icon></button>
+<button color="primary"><Icon>library_music</Icon></button>
+<button color="primary"><Icon>line_style</Icon></button>
+<button color="primary"><Icon>line_weight</Icon></button>
+<button color="primary"><Icon>linear_scale</Icon></button>
+<button color="primary"><Icon>link</Icon></button>
+<button color="primary"><Icon>link_off</Icon></button>
+<button color="primary"><Icon>linked_camera</Icon></button>
+<button color="primary"><Icon>linked_in</Icon></button>
+<button color="primary"><Icon>list</Icon></button>
+<button color="primary"><Icon>list_alt</Icon></button>
+<button color="primary"><Icon>live_help</Icon></button>
+<button color="primary"><Icon>live_tv</Icon></button>
+<button color="primary"><Icon>local_activity</Icon></button>
+<button color="primary"><Icon>local_airport</Icon></button>
+<button color="primary"><Icon>local_atm</Icon></button>
+<button color="primary"><Icon>local_bar</Icon></button>
+<button color="primary"><Icon>local_cafe</Icon></button>
+<button color="primary"><Icon>local_car_wash</Icon></button>
+<button color="primary"><Icon>local_convenience_store</Icon></button>
+<button color="primary"><Icon>local_dining</Icon></button>
+<button color="primary"><Icon>local_drink</Icon></button>
+<button color="primary"><Icon>local_florist</Icon></button>
+<button color="primary"><Icon>local_gas_station</Icon></button>
+<button color="primary"><Icon>local_grocery_store</Icon></button>
+<button color="primary"><Icon>local_hospital</Icon></button>
+<button color="primary"><Icon>local_hotel</Icon></button>
+<button color="primary"><Icon>local_laundry_service</Icon></button>
+<button color="primary"><Icon>local_library</Icon></button>
+<button color="primary"><Icon>local_mall</Icon></button>
+<button color="primary"><Icon>local_movies</Icon></button>
+<button color="primary"><Icon>local_offer</Icon></button>
+<button color="primary"><Icon>local_parking</Icon></button>
+<button color="primary"><Icon>local_pharmacy</Icon></button>
+<button color="primary"><Icon>local_phone</Icon></button>
+<button color="primary"><Icon>local_pizza</Icon></button>
+<button color="primary"><Icon>local_play</Icon></button>
+<button color="primary"><Icon>local_post_office</Icon></button>
+<button color="primary"><Icon>local_printshop</Icon></button>
+<button color="primary"><Icon>local_see</Icon></button>
+<button color="primary"><Icon>local_shipping</Icon></button>
+<button color="primary"><Icon>local_taxi</Icon></button>
+<button color="primary"><Icon>location_city</Icon></button>
+<button color="primary"><Icon>location_disabled</Icon></button>
+<button color="primary"><Icon>location_off</Icon></button>
+<button color="primary"><Icon>location_on</Icon></button>
+<button color="primary"><Icon>location_searching</Icon></button>
+<button color="primary"><Icon>lock</Icon></button>
+<button color="primary"><Icon>lock_open</Icon></button>
+<button color="primary"><Icon>looks</Icon></button>
+<button color="primary"><Icon>looks3</Icon></button>
+<button color="primary"><Icon>looks4</Icon></button>
+<button color="primary"><Icon>looks5</Icon></button>
+<button color="primary"><Icon>looks6</Icon></button>
+<button color="primary"><Icon>looks_one</Icon></button>
+<button color="primary"><Icon>looks_two</Icon></button>
+<button color="primary"><Icon>loop</Icon></button>
+<button color="primary"><Icon>loupe</Icon></button>
+<button color="primary"><Icon>low_priority</Icon></button>
+<button color="primary"><Icon>loyalty</Icon></button>
+<button color="primary"><Icon>mail</Icon></button>
+<button color="primary"><Icon>mail_outline</Icon></button>
+<button color="primary"><Icon>map</Icon></button>
+<button color="primary"><Icon>markunread</Icon></button>
+<button color="primary"><Icon>markunread_mailbox</Icon></button>
+<button color="primary"><Icon>maximize</Icon></button>
+<button color="primary"><Icon>meeting_room</Icon></button>
+<button color="primary"><Icon>memory</Icon></button>
+<button color="primary"><Icon>menu</Icon></button>
+<button color="primary"><Icon>menu_book</Icon></button>
+<button color="primary"><Icon>menu_open</Icon></button>
+<button color="primary"><Icon>merge_type</Icon></button>
+<button color="primary"><Icon>message</Icon></button>
+<button color="primary"><Icon>mic</Icon></button>
+<button color="primary"><Icon>mic_none</Icon></button>
+<button color="primary"><Icon>mic_off</Icon></button>
+<button color="primary"><Icon>minimize</Icon></button>
+<button color="primary"><Icon>missed_video_call</Icon></button>
+<button color="primary"><Icon>mms</Icon></button>
+<button color="primary"><Icon>mobile_friendly</Icon></button>
+<button color="primary"><Icon>mobile_off</Icon></button>
+<button color="primary"><Icon>mobile_screen_share</Icon></button>
+<button color="primary"><Icon>mode_comment</Icon></button>
+<button color="primary"><Icon>monetization_on</Icon></button>
+<button color="primary"><Icon>money</Icon></button>
+<button color="primary"><Icon>money_off</Icon></button>
+<button color="primary"><Icon>monochrome_photos</Icon></button>
+<button color="primary"><Icon>mood</Icon></button>
+<button color="primary"><Icon>mood_bad</Icon></button>
+<button color="primary"><Icon>more</Icon></button>
+<button color="primary"><Icon>more_horiz</Icon></button>
+<button color="primary"><Icon>more_vert</Icon></button>
+<button color="primary"><Icon>motorcycle</Icon></button>
+<button color="primary"><Icon>mouse</Icon></button>
+<button color="primary"><Icon>move_to_inbox</Icon></button>
+<button color="primary"><Icon>movie</Icon></button>
+<button color="primary"><Icon>movie_creation</Icon></button>
+<button color="primary"><Icon>movie_filter</Icon></button>
+<button color="primary"><Icon>multiline_chart</Icon></button>
+<button color="primary"><Icon>museum</Icon></button>
+<button color="primary"><Icon>music_note</Icon></button>
+<button color="primary"><Icon>music_off</Icon></button>
+<button color="primary"><Icon>music_video</Icon></button>
+<button color="primary"><Icon>my_location</Icon></button>
+<button color="primary"><Icon>nature</Icon></button>
+<button color="primary"><Icon>nature_people</Icon></button>
+<button color="primary"><Icon>navigate_before</Icon></button>
+<button color="primary"><Icon>navigate_next</Icon></button>
+<button color="primary"><Icon>navigation</Icon></button>
+<button color="primary"><Icon>near_me</Icon></button>
+<button color="primary"><Icon>network_cell</Icon></button>
+<button color="primary"><Icon>network_check</Icon></button>
+<button color="primary"><Icon>network_locked</Icon></button>
+<button color="primary"><Icon>network_wifi</Icon></button>
+<button color="primary"><Icon>new_releases</Icon></button>
+<button color="primary"><Icon>next_week</Icon></button>
+<button color="primary"><Icon>nfc</Icon></button>
+<button color="primary"><Icon>nights_stay</Icon></button>
+<button color="primary"><Icon>no_encryption</Icon></button>
+<button color="primary"><Icon>no_meeting_room</Icon></button>
+<button color="primary"><Icon>no_sim</Icon></button>
+<button color="primary"><Icon>not_interested</Icon></button>
+<button color="primary"><Icon>not_listed_location</Icon></button>
+<button color="primary"><Icon>note</Icon></button>
+<button color="primary"><Icon>note_add</Icon></button>
+<button color="primary"><Icon>notes</Icon></button>
+<button color="primary"><Icon>notification_important</Icon></button>
+<button color="primary"><Icon>notifications</Icon></button>
+<button color="primary"><Icon>notifications_active</Icon></button>
+<button color="primary"><Icon>notifications_none</Icon></button>
+<button color="primary"><Icon>notifications_off</Icon></button>
+<button color="primary"><Icon>notifications_paused</Icon></button>
+<button color="primary"><Icon>offline_bolt</Icon></button>
+<button color="primary"><Icon>offline_pin</Icon></button>
+<button color="primary"><Icon>ondemand_video</Icon></button>
+<button color="primary"><Icon>opacity</Icon></button>
+<button color="primary"><Icon>open_in_browser</Icon></button>
+<button color="primary"><Icon>open_in_new</Icon></button>
+<button color="primary"><Icon>open_with</Icon></button>
+<button color="primary"><Icon>outdoor_grill</Icon></button>
+<button color="primary"><Icon>pages</Icon></button>
+<button color="primary"><Icon>pageview</Icon></button>
+<button color="primary"><Icon>palette</Icon></button>
+<button color="primary"><Icon>pan_tool</Icon></button>
+<button color="primary"><Icon>panorama</Icon></button>
+<button color="primary"><Icon>panorama_fish_eye</Icon></button>
+<button color="primary"><Icon>panorama_horizontal</Icon></button>
+<button color="primary"><Icon>panorama_vertical</Icon></button>
+<button color="primary"><Icon>panorama_wide_angle</Icon></button>
+<button color="primary"><Icon>party_mode</Icon></button>
+<button color="primary"><Icon>pause</Icon></button>
+<button color="primary"><Icon>pause_circle_filled</Icon></button>
+<button color="primary"><Icon>pause_circle_outline</Icon></button>
+<button color="primary"><Icon>pause_presentation</Icon></button>
+<button color="primary"><Icon>payment</Icon></button>
+<button color="primary"><Icon>people</Icon></button>
+<button color="primary"><Icon>people_alt</Icon></button>
+<button color="primary"><Icon>people_outline</Icon></button>
+<button color="primary"><Icon>perm_camera_mic</Icon></button>
+<button color="primary"><Icon>perm_contact_calendar</Icon></button>
+<button color="primary"><Icon>perm_data_setting</Icon></button>
+<button color="primary"><Icon>perm_device_information</Icon></button>
+<button color="primary"><Icon>perm_identity</Icon></button>
+<button color="primary"><Icon>perm_media</Icon></button>
+<button color="primary"><Icon>perm_phone_msg</Icon></button>
+<button color="primary"><Icon>perm_scan_wifi</Icon></button>
+<button color="primary"><Icon>person</Icon></button>
+<button color="primary"><Icon>person_add</Icon></button>
+<button color="primary"><Icon>person_add_disabled</Icon></button>
+<button color="primary"><Icon>person_outline</Icon></button>
+<button color="primary"><Icon>person_pin</Icon></button>
+<button color="primary"><Icon>person_pin_circle</Icon></button>
+<button color="primary"><Icon>personal_video</Icon></button>
+<button color="primary"><Icon>pets</Icon></button>
+<button color="primary"><Icon>phone</Icon></button>
+<button color="primary"><Icon>phone_android</Icon></button>
+<button color="primary"><Icon>phone_bluetooth_speaker</Icon></button>
+<button color="primary"><Icon>phone_callback</Icon></button>
+<button color="primary"><Icon>phone_disabled</Icon></button>
+<button color="primary"><Icon>phone_enabled</Icon></button>
+<button color="primary"><Icon>phone_forwarded</Icon></button>
+<button color="primary"><Icon>phone_in_talk</Icon></button>
+<button color="primary"><Icon>phone_iphone</Icon></button>
+<button color="primary"><Icon>phone_locked</Icon></button>
+<button color="primary"><Icon>phone_missed</Icon></button>
+<button color="primary"><Icon>phone_paused</Icon></button>
+<button color="primary"><Icon>phonelink</Icon></button>
+<button color="primary"><Icon>phonelink_erase</Icon></button>
+<button color="primary"><Icon>phonelink_lock</Icon></button>
+<button color="primary"><Icon>phonelink_off</Icon></button>
+<button color="primary"><Icon>phonelink_ring</Icon></button>
+<button color="primary"><Icon>phonelink_setup</Icon></button>
+<button color="primary"><Icon>photo</Icon></button>
+<button color="primary"><Icon>photo_album</Icon></button>
+<button color="primary"><Icon>photo_camera</Icon></button>
+<button color="primary"><Icon>photo_filter</Icon></button>
+<button color="primary"><Icon>photo_library</Icon></button>
+<button color="primary"><Icon>photo_size_select_actual</Icon></button>
+<button color="primary"><Icon>photo_size_select_large</Icon></button>
+<button color="primary"><Icon>photo_size_select_small</Icon></button>
+<button color="primary"><Icon>picture_as_pdf</Icon></button>
+<button color="primary"><Icon>picture_in_picture</Icon></button>
+<button color="primary"><Icon>picture_in_picture_alt</Icon></button>
+<button color="primary"><Icon>pie_chart</Icon></button>
+<button color="primary"><Icon>pin_drop</Icon></button>
+<button color="primary"><Icon>pinterest</Icon></button>
+<button color="primary"><Icon>place</Icon></button>
+<button color="primary"><Icon>play_arrow</Icon></button>
+<button color="primary"><Icon>play_circle_filled</Icon></button>
+<button color="primary"><Icon>play_circle_filled_white</Icon></button>
+<button color="primary"><Icon>play_circle_outline</Icon></button>
+<button color="primary"><Icon>play_for_work</Icon></button>
+<button color="primary"><Icon>playlist_add</Icon></button>
+<button color="primary"><Icon>playlist_add_check</Icon></button>
+<button color="primary"><Icon>playlist_play</Icon></button>
+<button color="primary"><Icon>plus_one</Icon></button>
+<button color="primary"><Icon>policy</Icon></button>
+<button color="primary"><Icon>poll</Icon></button>
+<button color="primary"><Icon>polymer</Icon></button>
+<button color="primary"><Icon>pool</Icon></button>
+<button color="primary"><Icon>portable_wifi_off</Icon></button>
+<button color="primary"><Icon>portrait</Icon></button>
+<button color="primary"><Icon>post_add</Icon></button>
+<button color="primary"><Icon>power</Icon></button>
+<button color="primary"><Icon>power_input</Icon></button>
+<button color="primary"><Icon>power_off</Icon></button>
+<button color="primary"><Icon>power_settings_new</Icon></button>
+<button color="primary"><Icon>pregnant_woman</Icon></button>
+<button color="primary"><Icon>present_to_all</Icon></button>
+<button color="primary"><Icon>print</Icon></button>
+<button color="primary"><Icon>print_disabled</Icon></button>
+<button color="primary"><Icon>priority_high</Icon></button>
+<button color="primary"><Icon>public</Icon></button>
+<button color="primary"><Icon>publish</Icon></button>
+<button color="primary"><Icon>query_builder</Icon></button>
+<button color="primary"><Icon>question_answer</Icon></button>
+<button color="primary"><Icon>queue</Icon></button>
+<button color="primary"><Icon>queue_music</Icon></button>
+<button color="primary"><Icon>queue_play_next</Icon></button>
+<button color="primary"><Icon>radio</Icon></button>
+<button color="primary"><Icon>radio_button_checked</Icon></button>
+<button color="primary"><Icon>radio_button_unchecked</Icon></button>
+<button color="primary"><Icon>rate_review</Icon></button>
+<button color="primary"><Icon>receipt</Icon></button>
+<button color="primary"><Icon>recent_actors</Icon></button>
+<button color="primary"><Icon>record_voice_over</Icon></button>
+<button color="primary"><Icon>reddit</Icon></button>
+<button color="primary"><Icon>redeem</Icon></button>
+<button color="primary"><Icon>redo</Icon></button>
+<button color="primary"><Icon>refresh</Icon></button>
+<button color="primary"><Icon>remove</Icon></button>
+<button color="primary"><Icon>remove_circle</Icon></button>
+<button color="primary"><Icon>remove_circle_outline</Icon></button>
+<button color="primary"><Icon>remove_from_queue</Icon></button>
+<button color="primary"><Icon>remove_red_eye</Icon></button>
+<button color="primary"><Icon>remove_shopping_cart</Icon></button>
+<button color="primary"><Icon>reorder</Icon></button>
+<button color="primary"><Icon>repeat</Icon></button>
+<button color="primary"><Icon>repeat_one</Icon></button>
+<button color="primary"><Icon>replay</Icon></button>
+<button color="primary"><Icon>replay10</Icon></button>
+<button color="primary"><Icon>replay30</Icon></button>
+<button color="primary"><Icon>replay5</Icon></button>
+<button color="primary"><Icon>reply</Icon></button>
+<button color="primary"><Icon>reply_all</Icon></button>
+<button color="primary"><Icon>report</Icon></button>
+<button color="primary"><Icon>report_off</Icon></button>
+<button color="primary"><Icon>report_problem</Icon></button>
+<button color="primary"><Icon>restaurant</Icon></button>
+<button color="primary"><Icon>restaurant_menu</Icon></button>
+<button color="primary"><Icon>restore</Icon></button>
+<button color="primary"><Icon>restore_from_trash</Icon></button>
+<button color="primary"><Icon>restore_page</Icon></button>
+<button color="primary"><Icon>ring_volume</Icon></button>
+<button color="primary"><Icon>room</Icon></button>
+<button color="primary"><Icon>room_service</Icon></button>
+<button color="primary"><Icon>rotate90_degrees_ccw</Icon></button>
+<button color="primary"><Icon>rotate_left</Icon></button>
+<button color="primary"><Icon>rotate_right</Icon></button>
+<button color="primary"><Icon>router</Icon></button>
+<button color="primary"><Icon>rowing</Icon></button>
+<button color="primary"><Icon>rss_feed</Icon></button>
+<button color="primary"><Icon>rv_hookup</Icon></button>
+<button color="primary"><Icon>satellite</Icon></button>
+<button color="primary"><Icon>save</Icon></button>
+<button color="primary"><Icon>save_alt</Icon></button>
+<button color="primary"><Icon>scanner</Icon></button>
+<button color="primary"><Icon>scatter_plot</Icon></button>
+<button color="primary"><Icon>schedule</Icon></button>
+<button color="primary"><Icon>school</Icon></button>
+<button color="primary"><Icon>score</Icon></button>
+<button color="primary"><Icon>screen_lock_landscape</Icon></button>
+<button color="primary"><Icon>screen_lock_portrait</Icon></button>
+<button color="primary"><Icon>screen_lock_rotation</Icon></button>
+<button color="primary"><Icon>screen_rotation</Icon></button>
+<button color="primary"><Icon>screen_share</Icon></button>
+<button color="primary"><Icon>sd_card</Icon></button>
+<button color="primary"><Icon>sd_storage</Icon></button>
+<button color="primary"><Icon>search</Icon></button>
+<button color="primary"><Icon>security</Icon></button>
+<button color="primary"><Icon>select_all</Icon></button>
+<button color="primary"><Icon>send</Icon></button>
+<button color="primary"><Icon>sentiment_dissatisfied</Icon></button>
+<button color="primary"><Icon>sentiment_satisfied</Icon></button>
+<button color="primary"><Icon>sentiment_satisfied_alt</Icon></button>
+<button color="primary"><Icon>sentiment_very_dissatisfied</Icon></button>
+<button color="primary"><Icon>sentiment_very_satisfied</Icon></button>
+<button color="primary"><Icon>settings</Icon></button>
+<button color="primary"><Icon>settings_applications</Icon></button>
+<button color="primary"><Icon>settings_backup_restore</Icon></button>
+<button color="primary"><Icon>settings_bluetooth</Icon></button>
+<button color="primary"><Icon>settings_brightness</Icon></button>
+<button color="primary"><Icon>settings_cell</Icon></button>
+<button color="primary"><Icon>settings_ethernet</Icon></button>
+<button color="primary"><Icon>settings_input_antenna</Icon></button>
+<button color="primary"><Icon>settings_input_component</Icon></button>
+<button color="primary"><Icon>settings_input_composite</Icon></button>
+<button color="primary"><Icon>settings_input_hdmi</Icon></button>
+<button color="primary"><Icon>settings_input_svideo</Icon></button>
+<button color="primary"><Icon>settings_overscan</Icon></button>
+<button color="primary"><Icon>settings_phone</Icon></button>
+<button color="primary"><Icon>settings_power</Icon></button>
+<button color="primary"><Icon>settings_remote</Icon></button>
+<button color="primary"><Icon>settings_system_daydream</Icon></button>
+<button color="primary"><Icon>settings_voice</Icon></button>
+<button color="primary"><Icon>share</Icon></button>
+<button color="primary"><Icon>shop</Icon></button>
+<button color="primary"><Icon>shop_two</Icon></button>
+<button color="primary"><Icon>shopping_basket</Icon></button>
+<button color="primary"><Icon>shopping_cart</Icon></button>
+<button color="primary"><Icon>short_text</Icon></button>
+<button color="primary"><Icon>show_chart</Icon></button>
+<button color="primary"><Icon>shuffle</Icon></button>
+<button color="primary"><Icon>shutter_speed</Icon></button>
+<button color="primary"><Icon>signal_cellular0_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular1_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular2_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular3_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular4_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular_alt</Icon></button>
+<button color="primary"><Icon>signal_cellular_connected_no_internet0_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular_connected_no_internet1_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular_connected_no_internet2_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular_connected_no_internet3_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular_connected_no_internet4_bar</Icon></button>
+<button color="primary"><Icon>signal_cellular_no_sim</Icon></button>
+<button color="primary"><Icon>signal_cellular_null</Icon></button>
+<button color="primary"><Icon>signal_cellular_off</Icon></button>
+<button color="primary"><Icon>signal_wifi0_bar</Icon></button>
+<button color="primary"><Icon>signal_wifi1_bar</Icon></button>
+<button color="primary"><Icon>signal_wifi1_bar_lock</Icon></button>
+<button color="primary"><Icon>signal_wifi2_bar</Icon></button>
+<button color="primary"><Icon>signal_wifi2_bar_lock</Icon></button>
+<button color="primary"><Icon>signal_wifi3_bar</Icon></button>
+<button color="primary"><Icon>signal_wifi3_bar_lock</Icon></button>
+<button color="primary"><Icon>signal_wifi4_bar</Icon></button>
+<button color="primary"><Icon>signal_wifi4_bar_lock</Icon></button>
+<button color="primary"><Icon>signal_wifi_off</Icon></button>
+<button color="primary"><Icon>sim_card</Icon></button>
+<button color="primary"><Icon>single_bed</Icon></button>
+<button color="primary"><Icon>skip_next</Icon></button>
+<button color="primary"><Icon>skip_previous</Icon></button>
+<button color="primary"><Icon>slideshow</Icon></button>
+<button color="primary"><Icon>slow_motion_video</Icon></button>
+<button color="primary"><Icon>smartphone</Icon></button>
+<button color="primary"><Icon>smoke_free</Icon></button>
+<button color="primary"><Icon>smoking_rooms</Icon></button>
+<button color="primary"><Icon>sms</Icon></button>
+<button color="primary"><Icon>sms_failed</Icon></button>
+<button color="primary"><Icon>snooze</Icon></button>
+<button color="primary"><Icon>sort</Icon></button>
+<button color="primary"><Icon>sort_by_alpha</Icon></button>
+<button color="primary"><Icon>spa</Icon></button>
+<button color="primary"><Icon>space_bar</Icon></button>
+<button color="primary"><Icon>speaker</Icon></button>
+<button color="primary"><Icon>speaker_group</Icon></button>
+<button color="primary"><Icon>speaker_notes</Icon></button>
+<button color="primary"><Icon>speaker_notes_off</Icon></button>
+<button color="primary"><Icon>speaker_phone</Icon></button>
+<button color="primary"><Icon>speed</Icon></button>
+<button color="primary"><Icon>spellcheck</Icon></button>
+<button color="primary"><Icon>sports</Icon></button>
+<button color="primary"><Icon>sports_baseball</Icon></button>
+<button color="primary"><Icon>sports_basketball</Icon></button>
+<button color="primary"><Icon>sports_cricket</Icon></button>
+<button color="primary"><Icon>sports_esports</Icon></button>
+<button color="primary"><Icon>sports_football</Icon></button>
+<button color="primary"><Icon>sports_golf</Icon></button>
+<button color="primary"><Icon>sports_handball</Icon></button>
+<button color="primary"><Icon>sports_hockey</Icon></button>
+<button color="primary"><Icon>sports_kabaddi</Icon></button>
+<button color="primary"><Icon>sports_mma</Icon></button>
+<button color="primary"><Icon>sports_motorsports</Icon></button>
+<button color="primary"><Icon>sports_rugby</Icon></button>
+<button color="primary"><Icon>sports_soccer</Icon></button>
+<button color="primary"><Icon>sports_tennis</Icon></button>
+<button color="primary"><Icon>sports_volleyball</Icon></button>
+<button color="primary"><Icon>square_foot</Icon></button>
+<button color="primary"><Icon>star</Icon></button>
+<button color="primary"><Icon>star_border</Icon></button>
+<button color="primary"><Icon>star_half</Icon></button>
+<button color="primary"><Icon>star_outline</Icon></button>
+<button color="primary"><Icon>star_rate</Icon></button>
+<button color="primary"><Icon>stars</Icon></button>
+<button color="primary"><Icon>stay_current_landscape</Icon></button>
+<button color="primary"><Icon>stay_current_portrait</Icon></button>
+<button color="primary"><Icon>stay_primary_landscape</Icon></button>
+<button color="primary"><Icon>stay_primary_portrait</Icon></button>
+<button color="primary"><Icon>stop</Icon></button>
+<button color="primary"><Icon>stop_screen_share</Icon></button>
+<button color="primary"><Icon>storage</Icon></button>
+<button color="primary"><Icon>store</Icon></button>
+<button color="primary"><Icon>store_mall_directory</Icon></button>
+<button color="primary"><Icon>storefront</Icon></button>
+<button color="primary"><Icon>straighten</Icon></button>
+<button color="primary"><Icon>streetview</Icon></button>
+<button color="primary"><Icon>strikethrough_s</Icon></button>
+<button color="primary"><Icon>style</Icon></button>
+<button color="primary"><Icon>subdirectory_arrow_left</Icon></button>
+<button color="primary"><Icon>subdirectory_arrow_right</Icon></button>
+<button color="primary"><Icon>subject</Icon></button>
+<button color="primary"><Icon>subscriptions</Icon></button>
+<button color="primary"><Icon>subtitles</Icon></button>
+<button color="primary"><Icon>subway</Icon></button>
+<button color="primary"><Icon>supervised_user_circle</Icon></button>
+<button color="primary"><Icon>supervisor_account</Icon></button>
+<button color="primary"><Icon>surround_sound</Icon></button>
+<button color="primary"><Icon>swap_calls</Icon></button>
+<button color="primary"><Icon>swap_horiz</Icon></button>
+<button color="primary"><Icon>swap_horizontal_circle</Icon></button>
+<button color="primary"><Icon>swap_vert</Icon></button>
+<button color="primary"><Icon>swap_vertical_circle</Icon></button>
+<button color="primary"><Icon>switch_camera</Icon></button>
+<button color="primary"><Icon>switch_video</Icon></button>
+<button color="primary"><Icon>sync</Icon></button>
+<button color="primary"><Icon>sync_alt</Icon></button>
+<button color="primary"><Icon>sync_disabled</Icon></button>
+<button color="primary"><Icon>sync_problem</Icon></button>
+<button color="primary"><Icon>system_update</Icon></button>
+<button color="primary"><Icon>system_update_alt</Icon></button>
+<button color="primary"><Icon>tab</Icon></button>
+<button color="primary"><Icon>tab_unselected</Icon></button>
+<button color="primary"><Icon>table_chart</Icon></button>
+<button color="primary"><Icon>tablet</Icon></button>
+<button color="primary"><Icon>tablet_android</Icon></button>
+<button color="primary"><Icon>tablet_mac</Icon></button>
+<button color="primary"><Icon>tag_faces</Icon></button>
+<button color="primary"><Icon>tap_and_play</Icon></button>
+<button color="primary"><Icon>telegram</Icon></button>
+<button color="primary"><Icon>terrain</Icon></button>
+<button color="primary"><Icon>text_fields</Icon></button>
+<button color="primary"><Icon>text_format</Icon></button>
+<button color="primary"><Icon>text_rotate_up</Icon></button>
+<button color="primary"><Icon>text_rotate_vertical</Icon></button>
+<button color="primary"><Icon>text_rotation_angledown</Icon></button>
+<button color="primary"><Icon>text_rotation_angleup</Icon></button>
+<button color="primary"><Icon>text_rotation_down</Icon></button>
+<button color="primary"><Icon>text_rotation_none</Icon></button>
+<button color="primary"><Icon>textsms</Icon></button>
+<button color="primary"><Icon>texture</Icon></button>
+<button color="primary"><Icon>theaters</Icon></button>
+<button color="primary"><Icon>three_d_rotation</Icon></button>
+<button color="primary"><Icon>three_sixty</Icon></button>
+<button color="primary"><Icon>thumb_down</Icon></button>
+<button color="primary"><Icon>thumb_down_alt</Icon></button>
+<button color="primary"><Icon>thumb_up</Icon></button>
+<button color="primary"><Icon>thumb_up_alt</Icon></button>
+<button color="primary"><Icon>thumbs_up_down</Icon></button>
+<button color="primary"><Icon>time_to_leave</Icon></button>
+<button color="primary"><Icon>timelapse</Icon></button>
+<button color="primary"><Icon>timeline</Icon></button>
+<button color="primary"><Icon>timer</Icon></button>
+<button color="primary"><Icon>timer10</Icon></button>
+<button color="primary"><Icon>timer3</Icon></button>
+<button color="primary"><Icon>timer_off</Icon></button>
+<button color="primary"><Icon>title</Icon></button>
+<button color="primary"><Icon>toc</Icon></button>
+<button color="primary"><Icon>today</Icon></button>
+<button color="primary"><Icon>toggle_off</Icon></button>
+<button color="primary"><Icon>toggle_on</Icon></button>
+<button color="primary"><Icon>toll</Icon></button>
+<button color="primary"><Icon>tonality</Icon></button>
+<button color="primary"><Icon>touch_app</Icon></button>
+<button color="primary"><Icon>toys</Icon></button>
+<button color="primary"><Icon>track_changes</Icon></button>
+<button color="primary"><Icon>traffic</Icon></button>
+<button color="primary"><Icon>train</Icon></button>
+<button color="primary"><Icon>tram</Icon></button>
+<button color="primary"><Icon>transfer_within_a_station</Icon></button>
+<button color="primary"><Icon>transform</Icon></button>
+<button color="primary"><Icon>transit_enterexit</Icon></button>
+<button color="primary"><Icon>translate</Icon></button>
+<button color="primary"><Icon>trending_down</Icon></button>
+<button color="primary"><Icon>trending_flat</Icon></button>
+<button color="primary"><Icon>trending_up</Icon></button>
+<button color="primary"><Icon>trip_origin</Icon></button>
+<button color="primary"><Icon>tune</Icon></button>
+<button color="primary"><Icon>turned_in</Icon></button>
+<button color="primary"><Icon>turned_in_not</Icon></button>
+<button color="primary"><Icon>tv</Icon></button>
+<button color="primary"><Icon>tv_off</Icon></button>
+<button color="primary"><Icon>twitter</Icon></button>
+<button color="primary"><Icon>two_wheeler</Icon></button>
+<button color="primary"><Icon>unarchive</Icon></button>
+<button color="primary"><Icon>undo</Icon></button>
+<button color="primary"><Icon>unfold_less</Icon></button>
+<button color="primary"><Icon>unfold_more</Icon></button>
+<button color="primary"><Icon>unsubscribe</Icon></button>
+<button color="primary"><Icon>update</Icon></button>
+<button color="primary"><Icon>usb</Icon></button>
+<button color="primary"><Icon>verified_user</Icon></button>
+<button color="primary"><Icon>vertical_align_bottom</Icon></button>
+<button color="primary"><Icon>vertical_align_center</Icon></button>
+<button color="primary"><Icon>vertical_align_top</Icon></button>
+<button color="primary"><Icon>vertical_split</Icon></button>
+<button color="primary"><Icon>vibration</Icon></button>
+<button color="primary"><Icon>video_call</Icon></button>
+<button color="primary"><Icon>video_label</Icon></button>
+<button color="primary"><Icon>video_library</Icon></button>
+<button color="primary"><Icon>videocam</Icon></button>
+<button color="primary"><Icon>videocam_off</Icon></button>
+<button color="primary"><Icon>videogame_asset</Icon></button>
+<button color="primary"><Icon>view_agenda</Icon></button>
+<button color="primary"><Icon>view_array</Icon></button>
+<button color="primary"><Icon>view_carousel</Icon></button>
+<button color="primary"><Icon>view_column</Icon></button>
+<button color="primary"><Icon>view_comfy</Icon></button>
+<button color="primary"><Icon>view_compact</Icon></button>
+<button color="primary"><Icon>view_day</Icon></button>
+<button color="primary"><Icon>view_headline</Icon></button>
+<button color="primary"><Icon>view_list</Icon></button>
+<button color="primary"><Icon>view_module</Icon></button>
+<button color="primary"><Icon>view_quilt</Icon></button>
+<button color="primary"><Icon>view_stream</Icon></button>
+<button color="primary"><Icon>view_week</Icon></button>
+<button color="primary"><Icon>vignette</Icon></button>
+<button color="primary"><Icon>visibility</Icon></button>
+<button color="primary"><Icon>visibility_off</Icon></button>
+<button color="primary"><Icon>voice_chat</Icon></button>
+<button color="primary"><Icon>voice_over_off</Icon></button>
+<button color="primary"><Icon>voicemail</Icon></button>
+<button color="primary"><Icon>volume_down</Icon></button>
+<button color="primary"><Icon>volume_mute</Icon></button>
+<button color="primary"><Icon>volume_off</Icon></button>
+<button color="primary"><Icon>volume_up</Icon></button>
+<button color="primary"><Icon>vpn_key</Icon></button>
+<button color="primary"><Icon>vpn_lock</Icon></button>
+<button color="primary"><Icon>wallpaper</Icon></button>
+<button color="primary"><Icon>warning</Icon></button>
+<button color="primary"><Icon>watch</Icon></button>
+<button color="primary"><Icon>watch_later</Icon></button>
+<button color="primary"><Icon>waves</Icon></button>
+<button color="primary"><Icon>wb_auto</Icon></button>
+<button color="primary"><Icon>wb_cloudy</Icon></button>
+<button color="primary"><Icon>wb_incandescent</Icon></button>
+<button color="primary"><Icon>wb_iridescent</Icon></button>
+<button color="primary"><Icon>wb_sunny</Icon></button>
+<button color="primary"><Icon>wc</Icon></button>
+<button color="primary"><Icon>web</Icon></button>
+<button color="primary"><Icon>web_asset</Icon></button>
+<button color="primary"><Icon>weekend</Icon></button>
+<button color="primary"><Icon>whats_app</Icon></button>
+<button color="primary"><Icon>whatshot</Icon></button>
+<button color="primary"><Icon>where_to_vote</Icon></button>
+<button color="primary"><Icon>widgets</Icon></button>
+<button color="primary"><Icon>wifi</Icon></button>
+<button color="primary"><Icon>wifi_lock</Icon></button>
+<button color="primary"><Icon>wifi_off</Icon></button>
+<button color="primary"><Icon>wifi_tethering</Icon></button>
+<button color="primary"><Icon>work</Icon></button>
+<button color="primary"><Icon>work_off</Icon></button>
+<button color="primary"><Icon>work_outline</Icon></button>
+<button color="primary"><Icon>wrap_text</Icon></button>
+<button color="primary"><Icon>you_tube</Icon></button>
+<button color="primary"><Icon>youtube_searched_for</Icon></button>
+<button color="primary"><Icon>zoom_in</Icon></button>
+<button color="primary"><Icon>zoom_out</Icon></button>
+<button color="primary"><Icon>zoom_out_map</Icon></button>
       
       
       </Container>
