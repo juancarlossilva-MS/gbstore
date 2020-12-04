@@ -122,7 +122,7 @@ const Example = (props) => {
      
       <Container>
         <ShowIcons/>
-        <Button onClick={handleShowMorePosts}>Load more</Button>
+        <Button color="danger" onClick={handleShowMorePosts}>Load more</Button>
       </Container>
       
       </div>
