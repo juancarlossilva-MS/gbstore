@@ -44,6 +44,8 @@ const Example = (props) => {
   
   var x = [];
     const [icons, setIcons] = useState([]);
+    const [iconsToShow, setIconsToShow] = useState([]);
+
     useEffect(() => {
       let ref = fire.database().ref('/icones');
       ref.once("value")
@@ -58,15 +60,33 @@ const Example = (props) => {
 
       });
       }, []);
+
+      const postsPerPage = 13;
+      let arrayForHoldingPosts = [];
+
+      const [postsToShow, setPostsToShow] = useState([]);
+      const [next, setNext] = useState(3);
+
+  const handleShowMorePosts = () => {
+    loopWithSlice(next, next + postsPerPage);
+    setNext(next + postsPerPage);
+  };
+
+  const loopWithSlice = (start, end) => {
+    const slicedPosts = icons.slice(start, end);
+    arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
+    setIconsToShow(old => [...old,  ...arrayForHoldingPosts]);
+  };
   class ShowIcons extends Component {
    
       render(){
         return (
           <div>
-          {icons.map(index =>(
-             
-                <Icon>{index}</Icon>
-          ))}
+          {iconsToShow.map(ind =>
+              <button color="primary">
+               <Icon>{ind}</Icon>
+               </button>
+          )}
           </div>
         );
     }
@@ -102,6 +122,7 @@ const Example = (props) => {
      
       <Container>
         <ShowIcons/>
+        <Button onClick={handleShowMorePosts}>Load more</Button>
       </Container>
       
       </div>
