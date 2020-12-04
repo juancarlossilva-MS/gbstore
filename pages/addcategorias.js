@@ -61,7 +61,7 @@ const Example = (props) => {
       });
       }, []);
 
-      const postsPerPage = 13;
+      const postsPerPage = 7;
       let arrayForHoldingPosts = [];
 
       const [postsToShow, setPostsToShow] = useState([]);
@@ -78,14 +78,14 @@ const Example = (props) => {
     setIconsToShow(old => [...old,  ...arrayForHoldingPosts]);
   };
   class ShowIcons extends Component {
-   
       render(){
         return (
           <div>
+            
           {iconsToShow.map(ind =>
-              <button color="primary">
-               <Icon>{ind}</Icon>
-               </button>
+              <Button color="primary">
+              {ind} <Icon>{ind}</Icon>
+               </Button>
           )}
           </div>
         );
