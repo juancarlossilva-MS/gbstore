@@ -17,8 +17,11 @@ import {
   DropdownMenu,
   DropdownItem,
   Breadcrumb,BreadcrumbItem,
-  NavbarText
+  NavbarText,
+  Form, FormGroup,Label,Input
 } from 'reactstrap';
+
+import { Fab } from '@material-ui/core';
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +64,7 @@ const Example = (props) => {
       });
       }, []);
 
-      const postsPerPage = 7;
+      const postsPerPage = 13;
       let arrayForHoldingPosts = [];
 
       const [postsToShow, setPostsToShow] = useState([]);
@@ -79,18 +82,27 @@ const Example = (props) => {
   };
   class ShowIcons extends Component {
       render(){
+        let br = "\n";
+
         return (
           <div>
             
           {iconsToShow.map(ind =>
+              <span>
               <Button color="primary">
-              {ind} <Icon>{ind}</Icon>
-               </Button>
+               <Icon style={{fontSize:"50px"}}>{ind}</Icon>
+               </Button> {" "}
+             
+               </span>
           )}
+              
+
           </div>
         );
     }
   }
+
+  const fabStyle = { right: 140,position: 'fixed', color:"white", backgroundColor:"green"}
 
   return (
     <div>
@@ -121,8 +133,17 @@ const Example = (props) => {
       </div>
      
       <Container>
+        <Form>
+            <FormGroup>
+            <Label for="novacat">Insira o nome da nova categoria</Label>
+            <Input type="text" name="novacat" id="novacat" placeholder="Celulares/Notebooks ..."/>
+          </FormGroup>
+
         <ShowIcons/>
-        <Button color="danger" onClick={handleShowMorePosts}>Load more</Button>
+        {"\n\n\n"}
+        <Button color="danger" onClick={handleShowMorePosts}>Carregar + Icones</Button>
+        <Fab variant="extended"  style={fabStyle}><Icon>add</Icon>Salvar</Fab>
+        </Form>
       </Container>
       
       </div>
