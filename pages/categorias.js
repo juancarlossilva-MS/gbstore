@@ -4,7 +4,7 @@ import { MdPhonelinkRing, MdSpeakerPhone, MdAttachMoney, MdPeople, MdShowChart }
 import Link from 'next/link'
 
 import fire from '../config/fire-config';
-import Icon from '@material-ui/core/Icon';
+import { Fab, Icon } from '@material-ui/core';
 
 import {
   Collapse,Container, Row, Col,
@@ -58,7 +58,29 @@ useEffect(() => {
       });
   }, []);
 
+  class ShowCats extends Component {
+
+    render(){
+      
+        return(
+            <div>
+               {blogs.map(index => 
+                <span>
+              <Button color="primary">
+               <Icon style={{fontSize:"150px"}}>{index.iconName}</Icon>
+               <h4>{index.nome}</h4>
+
+               </Button> 
+             
+               </span>               )}
+               
+            </div> 
+
+        );
+    };
+  }
  
+  const fabStyle = { right: 40, top:"80%",position: 'fixed', color:"white", backgroundColor:"primary"}
 
   return (
     
@@ -88,9 +110,13 @@ useEffect(() => {
       </div>
      
       <Container>
-         <Icon>stay_primary_portrait</Icon> 
+         <ShowCats/> 
+         
+
       </Container>
-      
+      <Link href="/addcategorias">
+      <Fab   style={fabStyle}><Icon>add</Icon></Fab>
+      </Link>
       </div>
   );
 }

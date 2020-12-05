@@ -80,6 +80,11 @@ const Example = (props) => {
     arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts];
     setIconsToShow(old => [...old,  ...arrayForHoldingPosts]);
   };
+  const [input, setInput] = useState([]);
+  const [iconSel, setIconSel] = useState([]);
+
+  const [iconB, setIconB] = useState([]);
+
   class ShowIcons extends Component {
       render(){
         let br = "\n";
@@ -89,7 +94,7 @@ const Example = (props) => {
             
           {iconsToShow.map(ind =>
               <span>
-              <Button color="primary">
+              <Button   onClick={e => setIconSel( ind)} color={iconSel === ind ? "primary" : "default"}>
                <Icon style={{fontSize:"50px"}}>{ind}</Icon>
                </Button> {" "}
              
@@ -102,7 +107,18 @@ const Example = (props) => {
     }
   }
 
-  const fabStyle = { right: 140,position: 'fixed', color:"white", backgroundColor:"green"}
+  const handleSubmit = () => {
+      console.log(input);
+       console.log(iconSel);
+       fire.firestore().collection("categorias").add({
+        iconName: iconSel,
+        nome: input
+      });  
+
+  }
+
+  const fabStyle = { right: 10, top: "90%", position: 'fixed', color:"white", backgroundColor:"green"}
+  const fabStyle2 = { float: "left", top: "90%", position: 'fixed'}
 
   return (
     <div>
@@ -133,16 +149,16 @@ const Example = (props) => {
       </div>
      
       <Container>
-        <Form>
+        <Form >
             <FormGroup>
             <Label for="novacat">Insira o nome da nova categoria</Label>
-            <Input type="text" name="novacat" id="novacat" placeholder="Celulares/Notebooks ..."/>
+            <Input   onChange={e => setInput(e.target.value)} type="text" name="novacat" id="novacat" placeholder="Celulares/Notebooks ..."/>
           </FormGroup>
 
         <ShowIcons/>
         {"\n\n\n"}
-        <Button color="danger" onClick={handleShowMorePosts}>Carregar + Icones</Button>
-        <Fab variant="extended"  style={fabStyle}><Icon>add</Icon>Salvar</Fab>
+        <Fab variant="extended"  color="primary"  onClick={handleShowMorePosts} style={fabStyle2}>Carregar<Icon>add</Icon>Icones</Fab>
+        <Fab onClick={handleSubmit} variant="extended"  style={fabStyle}><Icon>add</Icon>Salvar</Fab>
         </Form>
       </Container>
       
