@@ -2,6 +2,8 @@ import React, { Component, useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Icon from '@material-ui/core/Icon';
 import fire from '../config/fire-config';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import {
   Collapse,Container, Row, Col,
@@ -32,6 +34,8 @@ const Example = (props) => {
 
     
   };
+  const router = useRouter();
+
   const mystyle = {
    
     display: 'inline-block',
@@ -114,6 +118,8 @@ const Example = (props) => {
         iconName: iconSel,
         nome: input
       });  
+
+      router.push("/categorias");
 
   }
 

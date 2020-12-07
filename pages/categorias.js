@@ -63,24 +63,25 @@ useEffect(() => {
     render(){
       
         return(
-            <div>
+            <Row>
                {blogs.map(index => 
-                <span>
-              <Button color="primary">
-               <Icon style={{fontSize:"150px"}}>{index.iconName}</Icon>
-               <h4>{index.nome}</h4>
+              <Col xs="6" sm="2">              
+              <Button style={{marginTop:30}} color="primary">
+                  <Icon style={{fontSize:"100px" }}>{index.iconName}</Icon>
+                  <h5>{index.nome}</h5>
 
-               </Button> 
+                  </Button> 
              
-               </span>               )}
+               </Col>               
+               )}
                
-            </div> 
+            </Row> 
 
         );
     };
   }
  
-  const fabStyle = { right: 40, top:"80%",position: 'fixed', color:"white", backgroundColor:"primary"}
+  const fabStyle = { right: 40, top:"80%",position: 'fixed', color:"white", backgroundColor:"light-blue"}
 
   return (
     
