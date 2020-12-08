@@ -4,7 +4,8 @@ import { MdPhonelinkRing, MdSpeakerPhone, MdAttachMoney, MdPeople, MdShowChart }
 import Link from 'next/link'
 
 import fire from '../config/fire-config';
-import { Fab, Icon } from '@material-ui/core';
+import {  Icon, makeStyles  } from '@material-ui/core';
+import {  SpeedDialIcon, SpeedDial, SpeedDialAction  } from '@material-ui/lab';
 
 import {
   Collapse,Container, Row, Col,
@@ -23,7 +24,11 @@ import {
   NavbarText
 } from 'reactstrap';
 
+import { useRouter } from 'next/router';
+
 const Example = (props) => {
+  
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -46,6 +51,7 @@ const Example = (props) => {
   }
 
   const [blogs, setBlogs] = useState([]);
+  const [corIcons, setCorIcons] = useState("");
 useEffect(() => {
     fire.firestore()
       .collection('categorias')
@@ -59,14 +65,15 @@ useEffect(() => {
   }, []);
 
   class ShowCats extends Component {
-
+    
     render(){
-      
+
+
         return(
             <Row>
                {blogs.map(index => 
               <Col xs="6" sm="2">              
-              <Button style={{marginTop:30}} color="primary">
+              <Button style={{marginTop:30}} color={corIcons}>
                   <Icon style={{fontSize:"100px" }}>{index.iconName}</Icon>
                   <h5>{index.nome}</h5>
 
@@ -80,9 +87,72 @@ useEffect(() => {
         );
     };
   }
- 
-  const fabStyle = { right: 40, top:"80%",position: 'fixed', color:"white", backgroundColor:"light-blue"}
 
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      transform: 'translateZ(0px)',
+      flexGrow: 1,
+    },
+    exampleWrapper: {
+      position: 'relative',
+      marginTop: theme.spacing(3),
+      height: 0 ,
+    },
+    radioGroup: {
+      margin: theme.spacing(1, 0),
+    },
+    speedDial: {
+      position: 'absolute',
+      '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
+        bottom: theme.spacing(2),
+        right: theme.spacing(2),
+      },
+      '&.MuiSpeedDial-directionDown, &.MuiSpeedDial-directionRight': {
+        top: theme.spacing(2),
+        left: theme.spacing(2),
+      },
+    },
+  }));
+  const router = useRouter();
+
+  const addCat = () =>{
+
+    router.push("/addcategorias");
+  }
+  const excluirCat = () =>{
+
+    router.push("/addcategorias");
+  }
+  const editarCat = () =>{
+    setCorIcons("primary");
+   
+  }
+  const actions = [
+    { icon: <Icon>delete</Icon> , name: 'Excluir', fun: excluirCat },
+    { icon: <Icon>edit</Icon>, name: 'Editar', fun: editarCat },
+    { icon: <Icon>add</Icon>, name: 'Adicionar', fun: addCat },
+  ];
+  const classes = useStyles();
+  const [direction, setDirection] = useState('up');
+  const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  const handleDirectionChange = (event) => {
+    setDirection(event.target.value);
+  };
+
+  const handleHiddenChange = (event) => {
+    setHidden(event.target.checked);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+ 
   return (
     
     <div>
@@ -111,13 +181,33 @@ useEffect(() => {
       </div>
      
       <Container>
-         <ShowCats/> 
+         <ShowCats setCorIcons={'default'}/> 
          
-
       </Container>
-      <Link href="/addcategorias">
-      <Fab   style={fabStyle}><Icon>add</Icon></Fab>
-      </Link>
+
+      <div className={classes.exampleWrapper}>
+        <SpeedDial
+          ariaLabel="SpeedDial example"
+          className={classes.speedDial}
+          hidden={hidden}
+          icon={<SpeedDialIcon />}
+          onClose={handleClose}
+          onOpen={handleOpen}
+          open={open}
+          direction={direction}
+        >
+          {actions.map((action) => (
+         
+            <SpeedDialAction
+              key={action.name}
+              icon={action.icon}
+              tooltipTitle={action.name}
+              onClick={action.fun}
+            />
+           
+          ))}
+        </SpeedDial>
+      </div>
       </div>
   );
 }
